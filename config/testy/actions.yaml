@@ -1,0 +1,42 @@
+create_account_with_balance:
+  base_actions:
+    account:
+      CRUD: create
+      hardcoded_values: null # map attribute to value (takes priority over function if any function enetered for same attribute) if null default functions are used
+      attr_gen_functions: null # map attribute to function if null default functions are used
+    balance:
+      CRUD: create
+      hardcoded_values: null # map attribute to value (takes priority over function if any function enetered for same attribute) if null default functions are used
+      attr_gen_functions: null # map attribute to function if null default functions are used
+  entity_selection_functions: null # map table to function, if null picks entity uniformly at random
+
+
+update_balance:
+  base_actions:
+    balance:
+      CRUD: update
+      hardcoded_values: null
+      attr_gen_functions: null
+      attributes_to_update: [amount]
+  entity_selection_functions: null
+
+
+macro_zero_account_and_its_balance:
+  base_actions:
+    account:
+      CRUD: [read, macro]
+    balance:
+      CRUD: [read, macro] # read requires a balance to already exist (and, since balance depends_on account, a matching account too); macro runs the function below
+      macro_function: macro_mock_set_balance_amt_and_account_some_other_value_to_zero
+  entity_selection_functions: null
+
+
+macro_duckdb_insert_account_and_balance:
+  base_actions:
+    account:
+      CRUD: macro # no 'read' needed - this macro creates a brand new account, it doesn't require one to already exist
+    balance:
+      CRUD: macro
+      macro_function: macro_mock_duckdb_insert_account_and_balance # single DuckDB SQL query inserts both the new account and its matching balance
+  entity_selection_functions: null
+

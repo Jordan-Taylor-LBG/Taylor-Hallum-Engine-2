@@ -1,0 +1,11 @@
+schema_entity_relationships_filepath: config/testy/schema_entity_relationships.yaml
+actions_config: config/testy/actions.yaml
+attr_gen_functions_module: mock_attr_gen_functions
+selection_functions_module: selection_functions.selection_function_least_chosen
+seconds_per_time_step: 60
+checkpoint_times:
+- 09:40:00
+- '12:05:00'
+daily_windows:
+- start: '2026-09-22 09:00:00'
+  end: '2026-09-22 12:05:00'

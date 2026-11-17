@@ -1,0 +1,9 @@
+attr_gen_functions_module: mock_attr_gen_functions
+selection_functions_module: selection_functions.selection_function_least_chosen
+seconds_per_time_step: 60
+daily_start_time: 09:00:00
+daily_end_time: '17:00:00'
+checkpoint_times:
+- '16:50:00'
+start_date: '2026-09-22'
+num_days: 1

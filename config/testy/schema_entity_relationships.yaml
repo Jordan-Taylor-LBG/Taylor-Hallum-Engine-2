@@ -1,0 +1,32 @@
+tables:
+
+  account:
+    fields:
+      - name: id
+        datatype: STRING
+        nullable: false
+      - name: some_other_field
+        datatype: STRING
+        nullable: true
+    primary_keys: [id]
+
+  balance:
+    fields:
+      - name: balance_id
+        datatype: STRING
+        nullable: false
+      - name: account_id
+        datatype: STRING
+        nullable: false
+      - name: amount
+        datatype: float
+        nullable: false
+    primary_keys: [balance_id]
+    depends_on: [account]
+
+relationships:
+  - from: balance
+    to: account
+    on_field: [account_id]
+    foreign_key_in_to: [id]
+    type: one-to-one

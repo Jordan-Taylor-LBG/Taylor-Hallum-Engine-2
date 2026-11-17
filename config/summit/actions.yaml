@@ -1,0 +1,13 @@
+create_summit_asset:
+  base_actions:
+    summit_asset:
+      CRUD: create
+      hardcoded_values: null
+      attr_gen_functions:
+        dmassetid: generate_summit_asset_id
+        tradeid: generate_transaction_id_j_cxpn
+        ccy: generate_currency
+        effdate: generate_summit_effective_date
+        matdate: generate_maturity_from_effdate
+        notional: generate_principal
+  entity_selection_functions: null

@@ -1,0 +1,115 @@
+create_string_of_loan_one_to_one_tables:
+  base_actions:
+    j_clpb:
+      CRUD: create
+      hardcoded_values: null # map attribute to value (takes priority over function if any function enetered for same attribute) if null default functions are used
+      attr_gen_functions: null # map attribute to function if null default functions are used
+    j_clla:
+      CRUD: create
+      hardcoded_values: null 
+      attr_gen_functions: null
+    j_clmi:
+      CRUD: create
+      hardcoded_values: null 
+      attr_gen_functions: null
+    j_clms:
+      CRUD: create
+      hardcoded_values: null 
+      attr_gen_functions: null
+    j_clas:
+      CRUD: create
+      hardcoded_values: null 
+      attr_gen_functions: null
+    dsclra:
+      CRUD: create
+      hardcoded_values: null 
+      attr_gen_functions: null
+  entity_selection_functions: null # map table to function, if null picks entity uniformly at random
+
+create_j_ctde:
+  base_actions:
+    j_ctde:
+      CRUD: create
+      hardcoded_values: null # map attribute to value (takes priority over function if any function enetered for same attribute) if null default functions are used
+      attr_gen_functions: null # map attribute to function if null default functions are used
+  entity_selection_functions: null # map table to function, if null picks entity uniformly at random
+
+create_j_ctun:
+  base_actions:
+    j_ctun:
+      CRUD: create
+      hardcoded_values: null # map attribute to value (takes priority over function if any function enetered for same attribute) if null default functions are used
+      attr_gen_functions: null # map attribute to function if null default functions are used
+  entity_selection_functions: null # map table to function, if null picks entity uniformly at random
+
+create_j_cums:
+  base_actions:
+    j_cums:
+      CRUD: create
+      hardcoded_values: null # map attribute to value (takes priority over function if any function enetered for same attribute) if null default functions are used
+      attr_gen_functions: null # map attribute to function if null default functions are used
+  entity_selection_functions: null # map table to function, if null picks entity uniformly at random
+
+
+#update_j_cums_j_rbbc:
+#  base_actions:
+#    j_cums:
+#      CRUD: update
+#      hardcoded_values: null
+#      attr_gen_functions: null
+#      attributes_to_update: [j_rbbc]
+#  entity_selection_functions: null
+
+
+
+
+
+
+#update_j_cams_dsccsa:
+#  base_actions:
+#    j_cams:
+#      CRUD: update
+#      hardcoded_values: null
+#      attr_gen_functions: null
+#      attributes_to_update: [dsccsa]
+#  entity_selection_functions: null
+
+
+create_string_of_facility_one_to_one_tables:
+  base_actions:
+    j_cafe:
+      CRUD: create
+      hardcoded_values: null # map attribute to value (takes priority over function if any function enetered for same attribute) if null default functions are used
+      attr_gen_functions: null # map attribute to function if null default functions are used
+    j_calm:
+      CRUD: create
+      hardcoded_values: null # map attribute to value (takes priority over function if any function enetered for same attribute) if null default functions are used
+      attr_gen_functions: null # map attribute to function if null default functions are used
+    j_cams:
+      CRUD: create
+      hardcoded_values: null # map attribute to value (takes priority over function if any function enetered for same attribute) if null default functions are used
+      attr_gen_functions: null # map attribute to function if null default functions are used
+    j_cami:
+      CRUD: create
+      hardcoded_values: null # map attribute to value (takes priority over function if any function enetered for same attribute) if null default functions are used
+      attr_gen_functions: null # map attribute to function if null default functions are used
+  entity_selection_functions: null # map table to function, if null picks entity uniformly at random
+
+create_j_clte:
+  base_actions:
+    j_clte:
+      CRUD: create
+      hardcoded_values: null # map attribute to value (takes priority over function if any function enetered for same attribute) if null default functions are used
+      attr_gen_functions: null # map attribute to function if null default functions are used
+  entity_selection_functions: null # map table to function, if null picks entity uniformly at random
+
+create_j_cldt:
+  base_actions:
+    j_cldt:
+      CRUD: create
+      hardcoded_values: null # map attribute to value (takes priority over function if any function enetered for same attribute) if null default functions are used
+      attr_gen_functions: null # map attribute to function if null default functions are used
+  entity_selection_functions: null # map table to function, if null picks entity uniformly at random
+  #post_actions:
+  #  - function: macro_update_j_clla_balance_from_j_cldt
+  #    affected_tables: [j_clla]

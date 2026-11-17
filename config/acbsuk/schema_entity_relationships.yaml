@@ -1,0 +1,3440 @@
+tables:
+
+  dsclra:
+    fields:
+      - name: delta_flag
+        datatype: STRING
+        nullable: true
+        is_audit_column: true
+      - name: j_ccvi
+        datatype: STRING
+        nullable: true
+      - name: j_ccwi
+        datatype: STRING
+        nullable: true
+      - name: j_ccxi
+        datatype: STRING
+        nullable: true
+      - name: j_ccyi
+        datatype: STRING
+        nullable: true
+      - name: j_cczc
+        datatype: STRING
+        nullable: true
+      - name: j_cdai
+        datatype: STRING
+        nullable: true
+      - name: dsirgc
+        datatype: STRING
+        nullable: true
+      - name: dsirhc
+        datatype: STRING
+        nullable: true
+      - name: dsiric
+        datatype: STRING
+        nullable: true
+      - name: dsirjc
+        datatype: STRING
+        nullable: true
+      - name: dsirkn
+        datatype: INTEGER
+        nullable: true
+      - name: dsirln
+        datatype: INTEGER
+        nullable: true
+      - name: dsirml
+        datatype: STRING
+        nullable: true
+      - name: dsirnc
+        datatype: STRING
+        nullable: true
+      - name: dsiron
+        datatype: INTEGER
+        nullable: true
+      - name: dsirpc
+        datatype: STRING
+        nullable: true
+      - name: dsirql
+        datatype: STRING
+        nullable: true
+      - name: dsirrc
+        datatype: STRING
+        nullable: true
+      - name: dsirs8
+        datatype: STRING
+        nullable: true
+        default_function: generate_date_yyyymmdd
+      - name: dsirtn
+        datatype: INTEGER
+        nullable: true
+      - name: dsiru8
+        datatype: STRING
+        nullable: true
+        default_function: generate_date_yyyymmdd
+      - name: dsirvn
+        datatype: FLOAT
+        nullable: true
+      - name: dsirwn
+        datatype: FLOAT
+        nullable: true
+      - name: dsirx8
+        datatype: STRING
+        nullable: true
+        default_function: generate_date_yyyymmdd
+      - name: dsiry8
+        datatype: STRING
+        nullable: true
+        default_function: generate_date_yyyymmdd
+      - name: dsirz8
+        datatype: STRING
+        nullable: true
+        default_function: generate_date_yyyymmdd
+      - name: dsisac
+        datatype: STRING
+        nullable: true
+      - name: dsisqa
+        datatype: FLOAT
+        nullable: true
+      - name: dsisrn
+        datatype: INTEGER
+        nullable: true
+      - name: dsissa
+        datatype: FLOAT
+        nullable: true
+      - name: dsista
+        datatype: FLOAT
+        nullable: true
+      - name: bts_ingestion_ts
+        datatype: TIMESTAMP
+        nullable: true
+        is_audit_column: true
+      - name: bts_ingest_map
+        datatype: STRING
+        nullable: true
+        is_audit_column: true
+      - name: bts_batch_dt
+        datatype: DATE
+        nullable: true
+        is_audit_column: true
+      - name: bts_flag
+        datatype: BOOLEAN
+        nullable: true
+        is_audit_column: true
+    depends_on: [j_clas]
+    primary_keys: [j_ccvi, j_ccwi]
+
+  j_cafe:
+    fields:
+      - name: delta_flag
+        datatype: STRING
+        nullable: true
+        is_audit_column: true
+      - name: j_bjai
+        datatype: STRING
+        nullable: true
+      - name: j_bjci
+        datatype: STRING
+        nullable: true
+      - name: j_bjdi
+        datatype: STRING
+        nullable: true
+      - name: j_cqbc
+        datatype: STRING
+        nullable: true
+      - name: j_bjei
+        datatype: STRING
+        nullable: true
+      - name: j_bjfc
+        datatype: STRING
+        nullable: true
+      - name: j_bjgi
+        datatype: STRING
+        nullable: true
+      - name: j_bjii
+        datatype: STRING
+        nullable: true
+      - name: j_bjbi
+        datatype: STRING
+        nullable: true
+      - name: j_bjhc
+        datatype: STRING
+        nullable: true
+      - name: j_bjk8
+        datatype: STRING
+        nullable: true
+        default_function: generate_date_yyyymmdd
+      - name: j_bjm8
+        datatype: STRING
+        nullable: true
+        default_function: generate_date_yyyymmdd
+      - name: j_bjvr
+        datatype: FLOAT
+        nullable: true
+      - name: j_bjwc
+        datatype: STRING
+        nullable: true
+      - name: j_bjz_
+        datatype: FLOAT
+        nullable: true
+      - name: j_gir_
+        datatype: FLOAT
+        nullable: true
+      - name: j_bka_
+        datatype: FLOAT
+        nullable: true
+      - name: j_bkd_
+        datatype: FLOAT
+        nullable: true
+      - name: j_bkf_
+        datatype: FLOAT
+        nullable: true
+      - name: j_bkg_
+        datatype: FLOAT
+        nullable: true
+      - name: j_bkh_
+        datatype: FLOAT
+        nullable: true
+      - name: j_bki_
+        datatype: FLOAT
+        nullable: true
+      - name: j_bkj_
+        datatype: FLOAT
+        nullable: true
+      - name: j_bkk_
+        datatype: FLOAT
+        nullable: true
+      - name: j_bkl_
+        datatype: FLOAT
+        nullable: true
+      - name: j_bkm_
+        datatype: FLOAT
+        nullable: true
+      - name: j_bkn_
+        datatype: FLOAT
+        nullable: true
+      - name: j_bko_
+        datatype: FLOAT
+        nullable: true
+      - name: j_bkp_
+        datatype: FLOAT
+        nullable: true
+      - name: j_bkq_
+        datatype: FLOAT
+        nullable: true
+      - name: j_bkr_
+        datatype: FLOAT
+        nullable: true
+      - name: j_bks_
+        datatype: FLOAT
+        nullable: true
+      - name: j_bkt_
+        datatype: FLOAT
+        nullable: true
+      - name: j_bku_
+        datatype: FLOAT
+        nullable: true
+      - name: j_bkv_
+        datatype: FLOAT
+        nullable: true
+      - name: j_bkw_
+        datatype: FLOAT
+        nullable: true
+      - name: j_bla_
+        datatype: FLOAT
+        nullable: true
+      - name: j_blb_
+        datatype: FLOAT
+        nullable: true
+      - name: j_blc_
+        datatype: FLOAT
+        nullable: true
+      - name: j_bld_
+        datatype: FLOAT
+        nullable: true
+      - name: j_ble_
+        datatype: FLOAT
+        nullable: true
+      - name: j_rde_
+        datatype: FLOAT
+        nullable: true
+      - name: j_rdf_
+        datatype: FLOAT
+        nullable: true
+      - name: j_rdg_
+        datatype: FLOAT
+        nullable: true
+      - name: j_rdh_
+        datatype: FLOAT
+        nullable: true
+      - name: j_blgc
+        datatype: STRING
+        nullable: true
+      - name: j_blh8
+        datatype: STRING
+        nullable: true
+      - name: j_blj8
+        datatype: STRING
+        nullable: true
+      - name: j_blkc
+        datatype: STRING
+        nullable: true
+      - name: j_ijhc
+        datatype: STRING
+        nullable: true
+      - name: j_ijic
+        datatype: STRING
+        nullable: true
+      - name: j_cqfc
+        datatype: STRING
+        nullable: true
+      - name: j_bnq_
+        datatype: FLOAT
+        nullable: true
+      - name: j_bnr_
+        datatype: FLOAT
+        nullable: true
+      - name: j_bnsn
+        datatype: FLOAT
+        nullable: true
+      - name: j_ejvt
+        datatype: STRING
+        nullable: true
+      - name: j_fdht
+        datatype: STRING
+        nullable: true
+      - name: dsdnca
+        datatype: FLOAT
+        nullable: true
+      - name: dsdndl
+        datatype: STRING
+        nullable: true
+      - name: dsdsja
+        datatype: FLOAT
+        nullable: true
+      - name: bts_ingestion_ts
+        datatype: TIMESTAMP
+        nullable: true
+        is_audit_column: true
+      - name: bts_ingest_map
+        datatype: STRING
+        nullable: true
+        is_audit_column: true
+      - name: bts_batch_dt
+        datatype: DATE
+        nullable: true
+        is_audit_column: true
+      - name: bts_flag
+        datatype: BOOLEAN
+        nullable: true
+        is_audit_column: true
+    depends_on: [j_ctde, j_calm]
+    primary_keys: [j_bjai, j_bjci]
+
+  j_calm:
+    fields:
+      - name: delta_flag
+        datatype: STRING
+        nullable: true
+        is_audit_column: true
+      - name: j_bfai
+        datatype: STRING
+        nullable: true
+      - name: j_bfci
+        datatype: STRING
+        nullable: true
+      - name: j_bfdi
+        datatype: STRING
+        nullable: true
+      - name: j_cqjc
+        datatype: STRING
+        nullable: true
+      - name: j_bfei
+        datatype: STRING
+        nullable: true
+      - name: j_bffc
+        datatype: STRING
+        nullable: true
+      - name: j_bfgi
+        datatype: STRING
+        nullable: true
+      - name: j_cqki
+        datatype: STRING
+        nullable: true
+      - name: j_rakt
+        datatype: STRING
+        nullable: true
+      - name: j_bfmc
+        datatype: STRING
+        nullable: true
+      - name: j_iilc
+        datatype: STRING
+        nullable: true
+      - name: j_bfr8
+        datatype: STRING
+        nullable: true
+      - name: j_bfs8
+        datatype: STRING
+        nullable: true
+      - name: j_bft8
+        datatype: STRING
+        nullable: true
+      - name: j_bfu8
+        datatype: STRING
+        nullable: true
+      - name: j_bfvc
+        datatype: STRING
+        nullable: true
+      - name: j_bfw8
+        datatype: STRING
+        nullable: true
+      - name: j_bfxl
+        datatype: STRING
+        nullable: true
+      - name: j_bfy_
+        datatype: FLOAT
+        nullable: true
+      - name: j_bga_
+        datatype: FLOAT
+        nullable: true
+      - name: j_bgc_
+        datatype: FLOAT
+        nullable: true
+      - name: j_bgd_
+        datatype: FLOAT
+        nullable: true
+      - name: j_sgu_
+        datatype: FLOAT
+        nullable: true
+      - name: j_fdht
+        datatype: STRING
+        nullable: true
+      - name: bts_ingestion_ts
+        datatype: TIMESTAMP
+        nullable: true
+        is_audit_column: true
+      - name: bts_ingest_map
+        datatype: STRING
+        nullable: true
+        is_audit_column: true
+      - name: bts_batch_dt
+        datatype: DATE
+        nullable: true
+        is_audit_column: true
+      - name: bts_flag
+        datatype: BOOLEAN
+        nullable: true
+        is_audit_column: true
+    depends_on: [j_cams]
+    primary_keys: [j_bfai, j_bfci]
+  
+  j_cami:
+    fields:
+      - name: delta_flag
+        datatype: STRING
+        nullable: true
+        is_audit_column: true
+      - name: j_baai
+        datatype: STRING
+        nullable: true
+      - name: j_baci
+        datatype: STRING
+        nullable: true
+      - name: j_babi
+        datatype: STRING
+        nullable: true
+      - name: j_baec
+        datatype: STRING
+        nullable: true
+        default_function: generate_j_baec
+      - name: j_bafc
+        datatype: STRING
+        nullable: true
+      - name: j_bai8
+        datatype: STRING
+        nullable: true
+        default_function: generate_date_yyyymmdd
+      - name: j_bak8
+        datatype: STRING
+        nullable: true
+        default_function: generate_date_yyyymmdd
+      - name: j_bal8
+        datatype: STRING
+        nullable: true
+        default_function: generate_date_yyyymmdd
+      - name: j_bam8
+        datatype: STRING
+        nullable: true
+        default_function: generate_date_yyyymmdd
+      - name: j_bar8
+        datatype: STRING
+        nullable: true
+      - name: j_basn
+        datatype: INTEGER
+        nullable: true
+      - name: j_batn
+        datatype: INTEGER
+        nullable: true
+      - name: j_bavc
+        datatype: STRING
+        nullable: true
+      - name: j_rfei
+        datatype: STRING
+        nullable: true
+      - name: j_bawi
+        datatype: STRING
+        nullable: true
+      - name: j_baxi
+        datatype: STRING
+        nullable: true
+      - name: j_bayc
+        datatype: STRING
+        nullable: true
+      - name: j_bazc
+        datatype: STRING
+        nullable: true
+        default_function: generate_currency
+      - name: j_bbac
+        datatype: STRING
+        nullable: true
+      - name: j_bbbc
+        datatype: STRING
+        nullable: true
+      - name: j_raql
+        datatype: STRING
+        nullable: true
+      - name: j_bbci
+        datatype: STRING
+        nullable: true
+        default_function: generate_j_bbci
+      - name: j_bbni
+        datatype: STRING
+        nullable: true
+      - name: j_egci
+        datatype: STRING
+        nullable: true
+      - name: j_egji
+        datatype: STRING
+        nullable: true
+      - name: j_egdi
+        datatype: STRING
+        nullable: true
+      - name: j_egei
+        datatype: STRING
+        nullable: true
+      - name: j_bcac
+        datatype: STRING
+        nullable: true
+        default_function: generate_j_bcac
+      - name: j_bcb8
+        datatype: STRING
+        nullable: true
+      - name: j_bccl
+        datatype: STRING
+        nullable: true
+      - name: j_bcdl
+        datatype: STRING
+        nullable: true
+      - name: j_bcel
+        datatype: STRING
+        nullable: true
+      - name: j_bcfl
+        datatype: STRING
+        nullable: true
+      - name: j_bcgl
+        datatype: STRING
+        nullable: true
+      - name: j_bch8
+        datatype: STRING
+        nullable: true
+        default_function: generate_date_yyyymmdd
+      - name: j_bcic
+        datatype: STRING
+        nullable: true
+      - name: j_bcj8
+        datatype: STRING
+        nullable: true
+        default_function: generate_date_yyyymmdd
+      - name: j_bckc
+        datatype: STRING
+        nullable: true
+      - name: j_bclc
+        datatype: STRING
+        nullable: true
+      - name: j_bcmc
+        datatype: STRING
+        nullable: true
+      - name: j_bcn8
+        datatype: STRING
+        nullable: true
+        default_function: generate_date_yyyymmdd
+      - name: j_bco8
+        datatype: STRING
+        nullable: true
+        default_function: generate_date_yyyymmdd
+      - name: j_bcp8
+        datatype: STRING
+        nullable: true
+        default_function: generate_date_yyyymmdd
+      - name: j_bcrc
+        datatype: STRING
+        nullable: true
+      - name: j_bcsc
+        datatype: STRING
+        nullable: true
+      - name: j_bctc
+        datatype: STRING
+        nullable: true
+      - name: j_bcuc
+        datatype: STRING
+        nullable: true
+        default_function: generate_j_bcuc
+      - name: j_tgji
+        datatype: STRING
+        nullable: true
+      - name: j_ggri
+        datatype: STRING
+        nullable: true
+      - name: j_ggsi
+        datatype: STRING
+        nullable: true
+      - name: j_bcvr
+        datatype: FLOAT
+        nullable: true
+      - name: j_bcwr
+        datatype: FLOAT
+        nullable: true
+      - name: j_bcxr
+        datatype: FLOAT
+        nullable: true
+      - name: j_bcyr
+        datatype: FLOAT
+        nullable: true
+      - name: j_bdmc
+        datatype: STRING
+        nullable: true
+      - name: j_bdnc
+        datatype: STRING
+        nullable: true
+      - name: j_bdoc
+        datatype: STRING
+        nullable: true
+      - name: j_bdpc
+        datatype: STRING
+        nullable: true
+      - name: j_bdq8
+        datatype: STRING
+        nullable: true
+        default_function: generate_date_yyyymmdd
+      - name: j_bdr8
+        datatype: STRING
+        nullable: true
+        default_function: generate_date_yyyymmdd
+      - name: j_bds8
+        datatype: STRING
+        nullable: true
+        default_function: generate_date_yyyymmdd
+      - name: j_bdt_
+        datatype: FLOAT
+        nullable: true
+      - name: j_bdu_
+        datatype: FLOAT
+        nullable: true
+      - name: j_limi
+        datatype: STRING
+        nullable: true
+      - name: j_fdht
+        datatype: STRING
+        nullable: true
+      - name: dsawac
+        datatype: STRING
+        nullable: true
+      - name: dsawbt
+        datatype: STRING
+        nullable: true
+      - name: dsblr8
+        datatype: STRING
+        nullable: true
+        default_function: generate_date_yyyymmdd
+      - name: dsblt_
+        datatype: FLOAT
+        nullable: true
+      - name: dsblu_
+        datatype: FLOAT
+        nullable: true
+      - name: dsdpya
+        datatype: FLOAT
+        nullable: true
+      - name: dsdpza
+        datatype: FLOAT
+        nullable: true
+      - name: dsdut8
+        datatype: STRING
+        nullable: true
+        default_function: generate_date_yyyymmdd
+      - name: dsduu8
+        datatype: STRING
+        nullable: true
+        default_function: generate_date_yyyymmdd
+      - name: bts_ingestion_ts
+        datatype: TIMESTAMP
+        nullable: true
+        is_audit_column: true
+      - name: bts_ingest_map
+        datatype: STRING
+        nullable: true
+        is_audit_column: true
+      - name: bts_batch_dt
+        datatype: DATE
+        nullable: true
+        is_audit_column: true
+      - name: bts_flag
+        datatype: BOOLEAN
+        nullable: true
+        is_audit_column: true
+    depends_on: [j_cams]
+    primary_keys: [j_baai, j_baci]
+
+  j_cams:
+    fields:
+      - name: delta_flag
+        datatype: STRING
+        nullable: true
+        is_audit_column: true
+      - name: j_baai
+        datatype: STRING
+        nullable: true
+        default_function: generate_portfolio_id
+      - name: j_baci
+        datatype: STRING
+        nullable: true
+        default_function: generate_ca_number
+      - name: j_babi
+        datatype: STRING
+        nullable: true
+      - name: j_cqyi
+        datatype: STRING
+        nullable: true
+      - name: j_cqzi
+        datatype: STRING
+        nullable: true
+      - name: j_crai
+        datatype: STRING
+        nullable: true
+      - name: j_badi
+        datatype: STRING
+        nullable: true
+      - name: j_crbc
+        datatype: STRING
+        nullable: true
+      - name: j_gizi
+        datatype: STRING
+        nullable: true
+      - name: j_croi
+        datatype: STRING
+        nullable: true
+      - name: j_rdbc
+        datatype: STRING
+        nullable: true
+        default_function: generate_j_rdbc
+      - name: j_crcc
+        datatype: STRING
+        nullable: true
+      - name: j_crdc
+        datatype: STRING
+        nullable: true
+      - name: j_bagt
+        datatype: STRING
+        nullable: true
+      - name: j_bah8
+        datatype: STRING
+        nullable: true
+        default_function: generate_date_yyyymmdd
+      - name: j_baj8
+        datatype: STRING
+        nullable: true
+        default_function: generate_date_yyyymmdd
+      - name: j_ban8
+        datatype: STRING
+        nullable: true
+        default_function: generate_date_yyyymmdd
+      - name: j_bao8
+        datatype: STRING
+        nullable: true
+        default_function: generate_date_yyyymmdd
+      - name: j_baq8
+        datatype: STRING
+        nullable: true
+        default_function: generate_date_yyyymmdd
+      - name: j_bau8
+        datatype: STRING
+        nullable: true
+        default_function: generate_date_yyyymmdd
+      - name: j_iijc
+        datatype: STRING
+        nullable: true
+        default_function: generate_currency
+      - name: j_bazc
+        datatype: STRING
+        nullable: true
+        default_function: generate_currency
+      - name: j_bbdi
+        datatype: STRING
+        nullable: true
+      - name: j_bbfi
+        datatype: STRING
+        nullable: true
+      - name: j_crpi
+        datatype: STRING
+        nullable: true
+      - name: j_bbgi
+        datatype: STRING
+        nullable: true
+      - name: j_bbhi
+        datatype: STRING
+        nullable: true
+      - name: j_bbic
+        datatype: STRING
+        nullable: true
+      - name: j_bbni
+        datatype: STRING
+        nullable: true
+      - name: j_bbp8
+        datatype: STRING
+        nullable: true
+      - name: j_bbq_
+        datatype: FLOAT
+        nullable: true
+      - name: j_bbs_
+        datatype: FLOAT
+        nullable: true
+      - name: j_bbt_
+        datatype: FLOAT
+        nullable: true
+      - name: j_bbu_
+        datatype: FLOAT
+        nullable: true
+      - name: j_bbv_
+        datatype: FLOAT
+        nullable: true
+      - name: j_cre_
+        datatype: FLOAT
+        nullable: true
+      - name: j_crf_
+        datatype: FLOAT
+        nullable: true
+      - name: j_crg_
+        datatype: FLOAT
+        nullable: true
+      - name: j_crh_
+        datatype: FLOAT
+        nullable: true
+      - name: j_cri_
+        datatype: FLOAT
+        nullable: true
+      - name: j_crj_
+        datatype: FLOAT
+        nullable: true
+      - name: j_crk_
+        datatype: FLOAT
+        nullable: true
+      - name: j_crl_
+        datatype: FLOAT
+        nullable: true
+      - name: j_bbw_
+        datatype: FLOAT
+        nullable: true
+      - name: j_bbx_
+        datatype: FLOAT
+        nullable: true
+      - name: j_bby_
+        datatype: FLOAT
+        nullable: true
+      - name: j_bbz_
+        datatype: FLOAT
+        nullable: true
+      - name: j_crm_
+        datatype: FLOAT
+        nullable: true
+      - name: j_crn_
+        datatype: FLOAT
+        nullable: true
+      - name: j_bdan
+        datatype: INTEGER
+        nullable: true
+      - name: j_bdbn
+        datatype: INTEGER
+        nullable: true
+      - name: j_bdcn
+        datatype: INTEGER
+        nullable: true
+      - name: j_bddn
+        datatype: INTEGER
+        nullable: true
+      - name: j_bde_
+        datatype: FLOAT
+        nullable: true
+      - name: j_bdf_
+        datatype: FLOAT
+        nullable: true
+      - name: j_bdg_
+        datatype: FLOAT
+        nullable: true
+      - name: j_bdh_
+        datatype: FLOAT
+        nullable: true
+      - name: j_bdi_
+        datatype: FLOAT
+        nullable: true
+      - name: j_bdj_
+        datatype: FLOAT
+        nullable: true
+      - name: j_bdk_
+        datatype: FLOAT
+        nullable: true
+      - name: j_bdl_
+        datatype: FLOAT
+        nullable: true
+      - name: j_iikl
+        datatype: STRING
+        nullable: true
+      - name: j_fdht
+        datatype: STRING
+        nullable: true
+      - name: dsawcc
+        datatype: STRING
+        nullable: true
+      - name: dsawdt
+        datatype: STRING
+        nullable: true
+      - name: dsawer
+        datatype: FLOAT
+        nullable: true
+      - name: dsawfr
+        datatype: FLOAT
+        nullable: true
+      - name: dsawgc
+        datatype: STRING
+        nullable: true
+      - name: dsbaul
+        datatype: STRING
+        nullable: true
+      - name: dsbchl
+        datatype: STRING
+        nullable: true
+      - name: dsbppi
+        datatype: STRING
+        nullable: true
+      - name: dsbqwt
+        datatype: STRING
+        nullable: true
+      - name: dscahc
+        datatype: STRING
+        nullable: true
+      - name: dsccra
+        datatype: FLOAT
+        nullable: true
+      - name: dsccsa
+        datatype: FLOAT
+        nullable: true
+      - name: dscctt
+        datatype: STRING
+        nullable: true
+      - name: dsduyc
+        datatype: STRING
+        nullable: true
+      - name: dsfrpc
+        datatype: STRING
+        nullable: true
+      - name: dsfjdl
+        datatype: STRING
+        nullable: true
+      - name: dsfoxl
+        datatype: STRING
+        nullable: true
+      - name: dsfoyl
+        datatype: STRING
+        nullable: true
+      - name: bts_ingestion_ts
+        datatype: TIMESTAMP
+        nullable: true
+        is_audit_column: true
+      - name: bts_ingest_map
+        datatype: STRING
+        nullable: true
+        is_audit_column: true
+      - name: bts_batch_dt
+        datatype: DATE
+        nullable: true
+        is_audit_column: true
+      - name: bts_flag
+        datatype: BOOLEAN
+        nullable: true
+        is_audit_column: true
+    depends_on: [j_cums, j_ctde]
+    primary_keys: [j_baai, j_baci]
+
+  j_clas:
+    fields:
+      - name: delta_flag
+        datatype: STRING
+        nullable: true
+        is_audit_column: true
+      - name: j_ccvi
+        datatype: STRING
+        nullable: true
+      - name: j_ccwi
+        datatype: STRING
+        nullable: true
+      - name: j_ccxi
+        datatype: STRING
+        nullable: true
+      - name: j_ccyi
+        datatype: STRING
+        nullable: true
+      - name: j_cczc
+        datatype: STRING
+        nullable: true
+      - name: j_cdai
+        datatype: STRING
+        nullable: true
+      - name: j_dhpc
+        datatype: STRING
+        nullable: true
+      - name: j_cdb8
+        datatype: STRING
+        nullable: true
+        default_function: generate_date_yyyymmdd
+      - name: j_cdcc
+        datatype: STRING
+        nullable: true
+      - name: j_cddc
+        datatype: STRING
+        nullable: true
+      - name: j_cdec
+        datatype: STRING
+        nullable: true
+      - name: j_mfuc
+        datatype: STRING
+        nullable: true
+      - name: j_mgoc
+        datatype: STRING
+        nullable: true
+      - name: j_mgli
+        datatype: STRING
+        nullable: true
+      - name: j_mgmc
+        datatype: STRING
+        nullable: true
+      - name: j_cdl8
+        datatype: STRING
+        nullable: true
+      - name: j_cdmc
+        datatype: STRING
+        nullable: true
+      - name: j_mfxr
+        datatype: FLOAT
+        nullable: true
+        default_function: generate_interest_rate
+      - name: j_mfyr
+        datatype: FLOAT
+        nullable: true
+        default_function: generate_interest_rate
+      - name: j_mgar
+        datatype: FLOAT
+        nullable: true
+        default_function: generate_interest_rate
+      - name: j_mgir
+        datatype: FLOAT
+        nullable: true
+      - name: j_mgjr
+        datatype: FLOAT
+        nullable: true
+      - name: j_cdqr
+        datatype: FLOAT
+        nullable: true
+      - name: j_mgpr
+        datatype: FLOAT
+        nullable: true
+      - name: j_cdzr
+        datatype: FLOAT
+        nullable: true
+        default_function: generate_interest_rate
+      - name: j_cea_
+        datatype: FLOAT
+        nullable: true
+      - name: j_dkb_
+        datatype: FLOAT
+        nullable: true
+      - name: j_cee_
+        datatype: FLOAT
+        nullable: true
+      - name: j_dkc_
+        datatype: FLOAT
+        nullable: true
+      - name: j_ceu_
+        datatype: FLOAT
+        nullable: true
+      - name: j_cew_
+        datatype: FLOAT
+        nullable: true
+      - name: j_cex_
+        datatype: FLOAT
+        nullable: true
+      - name: j_dgn_
+        datatype: FLOAT
+        nullable: true
+      - name: j_dgp_
+        datatype: FLOAT
+        nullable: true
+      - name: j_dgq_
+        datatype: FLOAT
+        nullable: true
+      - name: j_fdht
+        datatype: STRING
+        nullable: true
+      - name: j_irkc
+        datatype: STRING
+        nullable: true
+      - name: j_mgnc
+        datatype: STRING
+        nullable: true
+      - name: bts_ingestion_ts
+        datatype: TIMESTAMP
+        nullable: true
+        is_audit_column: true
+      - name: bts_ingest_map
+        datatype: STRING
+        nullable: true
+        is_audit_column: true
+      - name: bts_batch_dt
+        datatype: DATE
+        nullable: true
+        is_audit_column: true
+      - name: bts_flag
+        datatype: BOOLEAN
+        nullable: true
+        is_audit_column: true
+    depends_on: [j_clla]
+    primary_keys: [j_ccvi, j_ccwi]
+
+  j_cldt:
+    fields:
+      - name: delta_flag
+        datatype: STRING
+        nullable: true
+        is_audit_column: true
+      - name: j_rjoi
+        datatype: STRING
+        nullable: true
+      - name: j_rjpi
+        datatype: STRING
+        nullable: true
+      - name: j_rjqi
+        datatype: STRING
+        nullable: true
+      - name: j_rjri
+        datatype: STRING
+        nullable: true
+      - name: j_cfgc
+        datatype: STRING
+        nullable: true
+        default_function: generate_j_cfgc
+      - name: j_cfji
+        datatype: STRING
+        nullable: true
+      - name: j_cfkc
+        datatype: STRING
+        nullable: true
+      - name: j_rjsi
+        datatype: STRING
+        nullable: true
+      - name: j_cxmi
+        datatype: STRING
+        nullable: true
+      - name: j_amyc
+        datatype: STRING
+        nullable: true
+      - name: j_rkg8
+        datatype: STRING
+        nullable: true
+        default_function: generate_date_yyyymmdd
+      - name: j_rkf8
+        datatype: STRING
+        nullable: true
+        default_function: generate_date_yyyymmdd
+      - name: j_rjuc
+        datatype: STRING
+        nullable: true
+      - name: j_rjxc
+        datatype: STRING
+        nullable: true
+        default_function: generate_j_rjxc
+      - name: j_rjy_
+        datatype: FLOAT
+        nullable: true
+      - name: j_rjzr
+        datatype: FLOAT
+        nullable: true
+      - name: j_rkac
+        datatype: STRING
+        nullable: true
+      - name: j_cfhp
+        datatype: FLOAT
+        nullable: true
+      - name: j_isjc
+        datatype: STRING
+        nullable: true
+      - name: j_cfi8
+        datatype: INTEGER
+        nullable: true
+      - name: j_rjti
+        datatype: STRING
+        nullable: true
+      - name: j_annl
+        datatype: STRING
+        nullable: true
+      - name: j_cxpn
+        datatype: INTEGER
+        nullable: true
+      - name: bts_ingestion_ts
+        datatype: TIMESTAMP
+        nullable: true
+        is_audit_column: true
+      - name: bts_ingest_map
+        datatype: STRING
+        nullable: true
+        is_audit_column: true
+      - name: bts_batch_dt
+        datatype: DATE
+        nullable: true
+        is_audit_column: true
+      - name: bts_flag
+        datatype: BOOLEAN
+        nullable: true
+        is_audit_column: true
+    depends_on: [j_clte, j_clms]
+    primary_keys: [j_cxpn]
+
+  j_clla:
+    fields:
+      - name: delta_flag
+        datatype: STRING
+        nullable: true
+        is_audit_column: true
+      - name: j_meyi
+        datatype: STRING
+        nullable: true
+        default_function: generate_portfolio_id
+      - name: j_mezi
+        datatype: STRING
+        nullable: true
+      - name: j_mfai
+        datatype: STRING
+        nullable: true
+      - name: j_mfbi
+        datatype: STRING
+        nullable: true
+      - name: j_cjmc
+        datatype: STRING
+        nullable: true
+        default_function: generate_j_cjmc
+      - name: j_cjnc
+        datatype: STRING
+        nullable: true
+      - name: j_cjoi
+        datatype: STRING
+        nullable: true
+      - name: j_cjpi
+        datatype: STRING
+        nullable: true
+      - name: j_mfei
+        datatype: STRING
+        nullable: true
+      - name: j_mffl
+        datatype: STRING
+        nullable: true
+      - name: j_mfgi
+        datatype: STRING
+        nullable: true
+      - name: j_mfhi
+        datatype: STRING
+        nullable: true
+      - name: j_mfii
+        datatype: STRING
+        nullable: true
+      - name: j_cjqi
+        datatype: STRING
+        nullable: true
+      - name: j_cjri
+        datatype: STRING
+        nullable: true
+      - name: j_cjsi
+        datatype: STRING
+        nullable: true
+      - name: j_cjti
+        datatype: STRING
+        nullable: true
+      - name: j_cyec
+        datatype: STRING
+        nullable: true
+      - name: j_cjui
+        datatype: STRING
+        nullable: true
+      - name: j_cjvi
+        datatype: STRING
+        nullable: true
+      - name: j_cjwi
+        datatype: STRING
+        nullable: true
+      - name: j_cjxc
+        datatype: STRING
+        nullable: true
+      - name: j_dgkc
+        datatype: STRING
+        nullable: true
+      - name: j_cjyt
+        datatype: STRING
+        nullable: true
+      - name: j_mfcp
+        datatype: FLOAT
+        nullable: true
+      - name: j_cjzc
+        datatype: STRING
+        nullable: true
+      - name: j_ckai
+        datatype: STRING
+        nullable: true
+      - name: j_ckbi
+        datatype: STRING
+        nullable: true
+      - name: j_ckcc
+        datatype: STRING
+        nullable: true
+      - name: j_ckdc
+        datatype: STRING
+        nullable: true
+      - name: j_duac
+        datatype: STRING
+        nullable: true
+      - name: j_mfvc
+        datatype: STRING
+        nullable: true
+      - name: j_mfk8
+        datatype: STRING
+        nullable: true
+      - name: j_mfm8
+        datatype: STRING
+        nullable: true
+      - name: j_cke8
+        datatype: STRING
+        nullable: true
+      - name: j_rljc
+        datatype: STRING
+        nullable: true
+      - name: j_cxrc
+        datatype: STRING
+        nullable: true
+      - name: j_mfp8
+        datatype: STRING
+        nullable: true
+      - name: j_ckf_
+        datatype: FLOAT
+        nullable: true
+      - name: j_ckg_
+        datatype: FLOAT
+        nullable: true
+      - name: j_ckhr
+        datatype: FLOAT
+        nullable: true
+      - name: j_ckir
+        datatype: FLOAT
+        nullable: true
+        default_function: generate_interest_rate
+      - name: j_mhg_
+        datatype: FLOAT
+        nullable: true
+      - name: j_mhk_
+        datatype: FLOAT
+        nullable: true
+      - name: j_ckj_
+        datatype: FLOAT
+        nullable: true
+      - name: j_ckk_
+        datatype: FLOAT
+        nullable: true
+      - name: j_ckl_
+        datatype: FLOAT
+        nullable: true
+      - name: j_ckm_
+        datatype: FLOAT
+        nullable: true
+      - name: j_mkm_
+        datatype: FLOAT
+        nullable: true
+      - name: j_mho_
+        datatype: FLOAT
+        nullable: true
+      - name: j_ckn_
+        datatype: FLOAT
+        nullable: true
+      - name: j_mhl_
+        datatype: FLOAT
+        nullable: true
+      - name: j_mhm_
+        datatype: FLOAT
+        nullable: true
+      - name: j_mhn_
+        datatype: FLOAT
+        nullable: true
+      - name: j_mhq_
+        datatype: FLOAT
+        nullable: true
+      - name: j_ckor
+        datatype: FLOAT
+        nullable: true
+      - name: j_ckp_
+        datatype: FLOAT
+        nullable: true
+      - name: j_ckq_
+        datatype: FLOAT
+        nullable: true
+      - name: j_ckr_
+        datatype: FLOAT
+        nullable: true
+      - name: j_cks_
+        datatype: FLOAT
+        nullable: true
+      - name: j_ckti
+        datatype: STRING
+        nullable: true
+      - name: j_cku_
+        datatype: FLOAT
+        nullable: true
+      - name: j_ckv_
+        datatype: FLOAT
+        nullable: true
+      - name: j_ckw_
+        datatype: FLOAT
+        nullable: true
+      - name: j_cnh_
+        datatype: FLOAT
+        nullable: true
+      - name: j_cni_
+        datatype: FLOAT
+        nullable: true
+      - name: j_ckxn
+        datatype: FLOAT
+        nullable: true
+      - name: j_ckyn
+        datatype: FLOAT
+        nullable: true
+      - name: j_ckzn
+        datatype: FLOAT
+        nullable: true
+      - name: j_cman
+        datatype: FLOAT
+        nullable: true
+      - name: j_cmbn
+        datatype: FLOAT
+        nullable: true
+      - name: j_cmc8
+        datatype: STRING
+        nullable: true
+      - name: j_cyd8
+        datatype: STRING
+        nullable: true
+      - name: j_dhoc
+        datatype: STRING
+        nullable: true
+      - name: j_apnl
+        datatype: STRING
+        nullable: true
+      - name: j_apoi
+        datatype: STRING
+        nullable: true
+      - name: j_dec_
+        datatype: FLOAT
+        nullable: true
+      - name: j_apt8
+        datatype: STRING
+        nullable: true
+      - name: j_apu_
+        datatype: FLOAT
+        nullable: true
+      - name: j_awbc
+        datatype: STRING
+        nullable: true
+      - name: j_awdc
+        datatype: STRING
+        nullable: true
+      - name: j_ddz_
+        datatype: FLOAT
+        nullable: true
+      - name: j_dea_
+        datatype: FLOAT
+        nullable: true
+      - name: j_deb_
+        datatype: FLOAT
+        nullable: true
+      - name: j_ihtl
+        datatype: STRING
+        nullable: true
+      - name: j_ihul
+        datatype: STRING
+        nullable: true
+      - name: j_fdk_
+        datatype: FLOAT
+        nullable: true
+      - name: j_fdl_
+        datatype: FLOAT
+        nullable: true
+      - name: j_fdn_
+        datatype: FLOAT
+        nullable: true
+      - name: j_fdo_
+        datatype: FLOAT
+        nullable: true
+      - name: j_fdm_
+        datatype: FLOAT
+        nullable: true
+      - name: j_fdp_
+        datatype: FLOAT
+        nullable: true
+      - name: j_fia_
+        datatype: FLOAT
+        nullable: true
+      - name: j_fsgi
+        datatype: STRING
+        nullable: true
+      - name: j_ilcc
+        datatype: STRING
+        nullable: true
+      - name: j_ildc
+        datatype: STRING
+        nullable: true
+      - name: j_iuxc
+        datatype: STRING
+        nullable: true
+      - name: j_rlkp
+        datatype: FLOAT
+        nullable: true
+      - name: j_ilec
+        datatype: STRING
+        nullable: true
+      - name: j_ilfp
+        datatype: FLOAT
+        nullable: true
+      - name: j_imac
+        datatype: STRING
+        nullable: true
+      - name: j_iuyp
+        datatype: FLOAT
+        nullable: true
+      - name: j_iuzc
+        datatype: STRING
+        nullable: true
+      - name: j_imb_
+        datatype: FLOAT
+        nullable: true
+      - name: j_jbh_
+        datatype: FLOAT
+        nullable: true
+      - name: j_ilbl
+        datatype: STRING
+        nullable: true
+      - name: j_fdht
+        datatype: STRING
+        nullable: true
+      - name: dsaxpc
+        datatype: STRING
+        nullable: true
+      - name: dsbppi
+        datatype: STRING
+        nullable: true
+      - name: dsbqwt
+        datatype: STRING
+        nullable: true
+      - name: dsbsc8
+        datatype: STRING
+        nullable: true
+      - name: dsbrjl
+        datatype: STRING
+        nullable: true
+      - name: dsbrkl
+        datatype: STRING
+        nullable: true
+      - name: dsbsb8
+        datatype: STRING
+        nullable: true
+      - name: dsbyg_
+        datatype: FLOAT
+        nullable: true
+      - name: dscaxa
+        datatype: FLOAT
+        nullable: true
+      - name: dscdka
+        datatype: FLOAT
+        nullable: true
+      - name: dscvua
+        datatype: FLOAT
+        nullable: true
+      - name: dscvva
+        datatype: FLOAT
+        nullable: true
+      - name: dsczca
+        datatype: FLOAT
+        nullable: true
+      - name: dsdeia
+        datatype: FLOAT
+        nullable: true
+      - name: dsdepa
+        datatype: FLOAT
+        nullable: true
+      - name: dsdhdl
+        datatype: STRING
+        nullable: true
+      - name: dsdvpl
+        datatype: STRING
+        nullable: true
+      - name: dsecka
+        datatype: FLOAT
+        nullable: true
+      - name: bts_ingestion_ts
+        datatype: TIMESTAMP
+        nullable: true
+        is_audit_column: true
+      - name: bts_ingest_map
+        datatype: STRING
+        nullable: true
+        is_audit_column: true
+      - name: bts_batch_dt
+        datatype: DATE
+        nullable: true
+        is_audit_column: true
+      - name: bts_flag
+        datatype: BOOLEAN
+        nullable: true
+        is_audit_column: true
+    depends_on: [j_ctde, j_clms]
+    primary_keys: [j_meyi, j_mezi]
+
+  j_clmi:
+    fields:
+      - name: delta_flag
+        datatype: STRING
+        nullable: true
+        is_audit_column: true
+      - name: j_mbsi
+        datatype: STRING
+        nullable: true
+      - name: j_mbti
+        datatype: STRING
+        nullable: true
+        default_function: generate_loan_id
+      - name: j_gjbi
+        datatype: STRING
+        nullable: true
+        default_function: generate_ca_number
+      - name: j_gjci
+        datatype: STRING
+        nullable: true
+      - name: j_cmei
+        datatype: STRING
+        nullable: true
+      - name: j_mcac
+        datatype: STRING
+        nullable: true
+      - name: j_mcbc
+        datatype: STRING
+        nullable: true
+      - name: j_mccc
+        datatype: STRING
+        nullable: true
+        default_function: generate_j_mccc
+      - name: j_mcdc
+        datatype: STRING
+        nullable: true
+      - name: j_mcei
+        datatype: STRING
+        nullable: true
+      - name: j_mcfc
+        datatype: STRING
+        nullable: true
+        default_function: generate_currency
+      - name: j_mcgc
+        datatype: STRING
+        nullable: true
+        default_function: generate_j_mcgc
+      - name: j_rlnc
+        datatype: STRING
+        nullable: true
+      - name: j_mcmi
+        datatype: STRING
+        nullable: true
+      - name: j_mcni
+        datatype: STRING
+        nullable: true
+      - name: j_cmfc
+        datatype: STRING
+        nullable: true
+      - name: j_mcuc
+        datatype: STRING
+        nullable: true
+      - name: j_mcvc
+        datatype: STRING
+        nullable: true
+      - name: j_mcwc
+        datatype: STRING
+        nullable: true
+      - name: j_mcxc
+        datatype: STRING
+        nullable: true
+      - name: j_mcy8
+        datatype: STRING
+        nullable: true
+      - name: j_mcz8
+        datatype: STRING
+        nullable: true
+      - name: j_mda8
+        datatype: STRING
+        nullable: true
+      - name: j_mdb8
+        datatype: STRING
+        nullable: true
+      - name: j_mdcc
+        datatype: STRING
+        nullable: true
+      - name: j_mdd8
+        datatype: STRING
+        nullable: true
+      - name: j_mdel
+        datatype: STRING
+        nullable: true
+      - name: j_mdfl
+        datatype: STRING
+        nullable: true
+      - name: j_mdgl
+        datatype: STRING
+        nullable: true
+      - name: j_rarl
+        datatype: STRING
+        nullable: true
+      - name: j_raol
+        datatype: STRING
+        nullable: true
+      - name: j_mdhc
+        datatype: STRING
+        nullable: true
+      - name: j_mdil
+        datatype: STRING
+        nullable: true
+      - name: j_mdjl
+        datatype: STRING
+        nullable: true
+      - name: j_mdkl
+        datatype: STRING
+        nullable: true
+      - name: j_mdlc
+        datatype: STRING
+        nullable: true
+      - name: j_mdmd
+        datatype: INTEGER
+        nullable: true
+      - name: j_mdni
+        datatype: STRING
+        nullable: true
+      - name: j_mdtc
+        datatype: STRING
+        nullable: true
+      - name: j_mdui
+        datatype: STRING
+        nullable: true
+      - name: j_mdvn
+        datatype: INTEGER
+        nullable: true
+      - name: j_mdwn
+        datatype: INTEGER
+        nullable: true
+      - name: j_mdx8
+        datatype: STRING
+        nullable: true
+      - name: j_mdy8
+        datatype: STRING
+        nullable: true
+      - name: j_mdz_
+        datatype: FLOAT
+        nullable: true
+      - name: j_med8
+        datatype: STRING
+        nullable: true
+      - name: j_meqc
+        datatype: STRING
+        nullable: true
+      - name: j_merc
+        datatype: STRING
+        nullable: true
+      - name: j_mesc
+        datatype: STRING
+        nullable: true
+        default_function: generate_j_mesc
+      - name: j_metc
+        datatype: STRING
+        nullable: true
+      - name: j_meu8
+        datatype: STRING
+        nullable: true
+      - name: j_mev8
+        datatype: STRING
+        nullable: true
+        default_function: generate_date_yyyymmdd
+      - name: j_dudc
+        datatype: STRING
+        nullable: true
+      - name: j_duec
+        datatype: STRING
+        nullable: true
+        default_function: generate_j_duec
+      - name: j_egfi
+        datatype: STRING
+        nullable: true
+      - name: j_eggi
+        datatype: STRING
+        nullable: true
+      - name: j_egki
+        datatype: STRING
+        nullable: true
+      - name: j_eghi
+        datatype: STRING
+        nullable: true
+      - name: j_egii
+        datatype: STRING
+        nullable: true
+      - name: j_ejy8
+        datatype: STRING
+        nullable: true
+      - name: j_lini
+        datatype: STRING
+        nullable: true
+      - name: j_fdht
+        datatype: STRING
+        nullable: true
+      - name: bts_ingestion_ts
+        datatype: TIMESTAMP
+        nullable: true
+        is_audit_column: true
+      - name: bts_ingest_map
+        datatype: STRING
+        nullable: true
+        is_audit_column: true
+      - name: bts_batch_dt
+        datatype: DATE
+        nullable: true
+        is_audit_column: true
+      - name: bts_flag
+        datatype: BOOLEAN
+        nullable: true
+        is_audit_column: true
+    depends_on: [j_clla, j_ctde]
+    primary_keys: [j_mbsi, j_mbti]
+
+  j_clms:
+    fields:
+      - name: delta_flag
+        datatype: STRING
+        nullable: true
+        is_audit_column: true
+      - name: j_mbsi
+        datatype: STRING
+        nullable: true
+        default_function: generate_portfolio_id
+      - name: j_mbti
+        datatype: STRING
+        nullable: true
+        default_function: generate_loan_id
+      - name: j_mbui
+        datatype: STRING
+        nullable: true
+      - name: j_mbvl
+        datatype: STRING
+        nullable: true
+      - name: j_mbwi
+        datatype: STRING
+        nullable: true
+      - name: j_mbxi
+        datatype: STRING
+        nullable: true
+        default_function: generate_ca_number
+      - name: j_mbyi
+        datatype: STRING
+        nullable: true
+      - name: j_cmgi
+        datatype: STRING
+        nullable: true
+      - name: j_cmhi
+        datatype: STRING
+        nullable: true
+      - name: j_cmii
+        datatype: STRING
+        nullable: true
+      - name: j_cmji
+        datatype: STRING
+        nullable: true
+      - name: j_cmki
+        datatype: STRING
+        nullable: true
+      - name: j_cmli
+        datatype: STRING
+        nullable: true
+      - name: j_cmmi
+        datatype: STRING
+        nullable: true
+      - name: j_cmnc
+        datatype: STRING
+        nullable: true
+      - name: j_cmoc
+        datatype: STRING
+        nullable: true
+      - name: j_mbzi
+        datatype: STRING
+        nullable: true
+      - name: j_dhan
+        datatype: INTEGER
+        nullable: true
+      - name: j_gjai
+        datatype: STRING
+        nullable: true
+      - name: j_cmpi
+        datatype: STRING
+        nullable: true
+      - name: j_mcfc
+        datatype: STRING
+        nullable: true
+        default_function: generate_currency
+      - name: j_mch8
+        datatype: STRING
+        nullable: true
+        default_function: generate_date_yyyymmdd
+      - name: j_mci8
+        datatype: STRING
+        nullable: true
+        default_function: generate_date_yyyymmdd
+      - name: j_mcj8
+        datatype: STRING
+        nullable: true
+        default_function: generate_date_yyyymmdd
+      - name: j_mck8
+        datatype: STRING
+        nullable: true
+        default_function: generate_date_yyyymmdd
+      - name: j_dhd8
+        datatype: STRING
+        nullable: true
+      - name: j_rlsc
+        datatype: STRING
+        nullable: true
+      - name: j_mcoi
+        datatype: STRING
+        nullable: true
+      - name: j_mcpi
+        datatype: STRING
+        nullable: true
+      - name: j_mcqi
+        datatype: STRING
+        nullable: true
+        default_function: generate_j_mcqi
+      - name: j_mcri
+        datatype: STRING
+        nullable: true
+      - name: j_cmqi
+        datatype: STRING
+        nullable: true
+      - name: j_cmrc
+        datatype: STRING
+        nullable: true
+      - name: j_mctc
+        datatype: STRING
+        nullable: true
+      - name: j_mee_
+        datatype: FLOAT
+        nullable: true
+      - name: j_mef_
+        datatype: FLOAT
+        nullable: true
+      - name: j_meg_
+        datatype: FLOAT
+        nullable: true
+      - name: j_meh_
+        datatype: FLOAT
+        nullable: true
+      - name: j_cms_
+        datatype: FLOAT
+        nullable: true
+      - name: j_cmt_
+        datatype: FLOAT
+        nullable: true
+      - name: j_cmu_
+        datatype: FLOAT
+        nullable: true
+      - name: j_cmv_
+        datatype: FLOAT
+        nullable: true
+      - name: j_cmy_
+        datatype: FLOAT
+        nullable: true
+      - name: j_cmw_
+        datatype: FLOAT
+        nullable: true
+      - name: j_cmx_
+        datatype: FLOAT
+        nullable: true
+      - name: j_cmz_
+        datatype: FLOAT
+        nullable: true
+      - name: j_cna_
+        datatype: FLOAT
+        nullable: true
+      - name: j_cnb_
+        datatype: FLOAT
+        nullable: true
+      - name: j_mej_
+        datatype: FLOAT
+        nullable: true
+      - name: j_mek_
+        datatype: FLOAT
+        nullable: true
+      - name: j_mel_
+        datatype: FLOAT
+        nullable: true
+      - name: j_mem_
+        datatype: FLOAT
+        nullable: true
+      - name: j_cnc_
+        datatype: FLOAT
+        nullable: true
+      - name: j_cndn
+        datatype: INTEGER
+        nullable: true
+      - name: j_mein
+        datatype: INTEGER
+        nullable: true
+      - name: j_cnen
+        datatype: INTEGER
+        nullable: true
+      - name: j_ril_
+        datatype: FLOAT
+        nullable: true
+      - name: j_mdlc
+        datatype: STRING
+        nullable: true
+      - name: j_meoc
+        datatype: STRING
+        nullable: true
+      - name: j_mep8
+        datatype: STRING
+        nullable: true
+      - name: j_mew_
+        datatype: FLOAT
+        nullable: true
+      - name: j_cnfc
+        datatype: STRING
+        nullable: true
+        default_function: generate_j_cnfc
+      - name: j_cngc
+        datatype: STRING
+        nullable: true
+        default_function: generate_j_cngc
+      - name: j_dufc
+        datatype: STRING
+        nullable: true
+      - name: j_awac
+        datatype: STRING
+        nullable: true
+        default_function: generate_j_awac
+      - name: j_awcc
+        datatype: STRING
+        nullable: true
+      - name: j_fsfi
+        datatype: STRING
+        nullable: true
+      - name: j_ikzc
+        datatype: STRING
+        nullable: true
+      - name: j_iuwc
+        datatype: STRING
+        nullable: true
+      - name: j_ilac
+        datatype: STRING
+        nullable: true
+      - name: j_fdht
+        datatype: STRING
+        nullable: true
+      - name: dsbcpt
+        datatype: STRING
+        nullable: true
+      - name: dsbcnl
+        datatype: STRING
+        nullable: true
+      - name: dsbcol
+        datatype: STRING
+        nullable: true
+      - name: dsbppi
+        datatype: STRING
+        nullable: true
+      - name: dsbqwt
+        datatype: STRING
+        nullable: true
+      - name: dscajc
+        datatype: STRING
+        nullable: true
+      - name: dsdhdl
+        datatype: STRING
+        nullable: true
+      - name: dsdpnn
+        datatype: INTEGER
+        nullable: true
+      - name: dsdvpl
+        datatype: STRING
+        nullable: true
+      - name: dseygl
+        datatype: STRING
+        nullable: true
+      - name: dsfpdc
+        datatype: STRING
+        nullable: true
+      - name: dsfryc
+        datatype: STRING
+        nullable: true
+      - name: dsfqu8
+        datatype: STRING
+        nullable: true
+      - name: bts_ingestion_ts
+        datatype: TIMESTAMP
+        nullable: true
+        is_audit_column: true
+      - name: bts_ingest_map
+        datatype: STRING
+        nullable: true
+        is_audit_column: true
+      - name: bts_batch_dt
+        datatype: DATE
+        nullable: true
+        is_audit_column: true
+      - name: bts_flag
+        datatype: BOOLEAN
+        nullable: true
+        is_audit_column: true
+    depends_on: [j_ctde, j_cams]
+    primary_keys: [j_mbsi, j_mbti]
+
+  j_clpb:
+    fields:
+      - name: delta_flag
+        datatype: STRING
+        nullable: true
+        is_audit_column: true
+      - name: j_mkwi
+        datatype: STRING
+        nullable: true
+      - name: j_mkxi
+        datatype: STRING
+        nullable: true
+      - name: j_mkyi
+        datatype: STRING
+        nullable: true
+      - name: j_mkzi
+        datatype: STRING
+        nullable: true
+      - name: j_cxac
+        datatype: STRING
+        nullable: true
+      - name: j_mlac
+        datatype: STRING
+        nullable: true
+        default_function: generate_j_mlac
+      - name: j_mlbc
+        datatype: STRING
+        nullable: true
+      - name: j_dhfc
+        datatype: STRING
+        nullable: true
+      - name: j_mlc8
+        datatype: STRING
+        nullable: true
+        default_function: generate_date_yyyymmdd
+      - name: j_mld8
+        datatype: STRING
+        nullable: true
+      - name: j_dcn8
+        datatype: STRING
+        nullable: true
+      - name: j_mlfn
+        datatype: INTEGER
+        nullable: true
+      - name: j_mlg_
+        datatype: FLOAT
+        nullable: true
+      - name: j_rmrr
+        datatype: FLOAT
+        nullable: true
+      - name: j_mlh_
+        datatype: FLOAT
+        nullable: true
+      - name: j_mli_
+        datatype: FLOAT
+        nullable: true
+      - name: j_mmdc
+        datatype: STRING
+        nullable: true
+      - name: j_mmel
+        datatype: STRING
+        nullable: true
+      - name: j_mmfc
+        datatype: STRING
+        nullable: true
+      - name: j_dcoc
+        datatype: STRING
+        nullable: true
+      - name: j_mmgc
+        datatype: STRING
+        nullable: true
+      - name: j_mmhc
+        datatype: STRING
+        nullable: true
+      - name: j_mmjn
+        datatype: INTEGER
+        nullable: true
+      - name: j_ilrn
+        datatype: INTEGER
+        nullable: true
+      - name: j_bdwi
+        datatype: STRING
+        nullable: true
+      - name: j_fdht
+        datatype: STRING
+        nullable: true
+      - name: j_fsmi
+        datatype: STRING
+        nullable: true
+      - name: j_itwc
+        datatype: STRING
+        nullable: true
+      - name: j_mmtd
+        datatype: STRING
+        nullable: true
+      - name: bts_ingestion_ts
+        datatype: TIMESTAMP
+        nullable: true
+        is_audit_column: true
+      - name: bts_ingest_map
+        datatype: STRING
+        nullable: true
+        is_audit_column: true
+      - name: bts_batch_dt
+        datatype: DATE
+        nullable: true
+        is_audit_column: true
+      - name: bts_flag
+        datatype: BOOLEAN
+        nullable: true
+        is_audit_column: true
+    depends_on: [j_clla, j_clms, j_ctde]
+    primary_keys: [j_mkwi, j_mkxi]
+
+  j_clte:
+    fields:
+      - name: delta_flag
+        datatype: STRING
+        nullable: true
+        is_audit_column: true
+      - name: j_nlpc
+        datatype: STRING
+        nullable: true
+      - name: j_nlqt
+        datatype: STRING
+        nullable: true
+      - name: j_nlrt
+        datatype: STRING
+        nullable: true
+      - name: j_rksn
+        datatype: INTEGER
+        nullable: true
+      - name: j_dbbl
+        datatype: STRING
+        nullable: true
+      - name: j_rkkc
+        datatype: STRING
+        nullable: true
+      - name: j_dbcc
+        datatype: STRING
+        nullable: true
+      - name: j_dbdl
+        datatype: STRING
+        nullable: true
+      - name: j_dbec
+        datatype: STRING
+        nullable: true
+      - name: j_dgkc
+        datatype: STRING
+        nullable: true
+      - name: j_rpxc
+        datatype: STRING
+        nullable: true
+      - name: j_nluc
+        datatype: STRING
+        nullable: true
+      - name: j_rkml
+        datatype: STRING
+        nullable: true
+      - name: j_nlvc
+        datatype: STRING
+        nullable: true
+      - name: j_dbfp
+        datatype: FLOAT
+        nullable: true
+      - name: j_dbgp
+        datatype: FLOAT
+        nullable: true
+      - name: j_dbhc
+        datatype: STRING
+        nullable: true
+      - name: j_dbil
+        datatype: STRING
+        nullable: true
+      - name: j_nlxl
+        datatype: STRING
+        nullable: true
+      - name: j_dbjl
+        datatype: STRING
+        nullable: true
+      - name: j_nlzl
+        datatype: STRING
+        nullable: true
+      - name: j_rknl
+        datatype: STRING
+        nullable: true
+      - name: j_rkoc
+        datatype: STRING
+        nullable: true
+      - name: j_aozi
+        datatype: STRING
+        nullable: true
+      - name: j_nmai
+        datatype: STRING
+        nullable: true
+      - name: j_nlwc
+        datatype: STRING
+        nullable: true
+      - name: j_rkpc
+        datatype: STRING
+        nullable: true
+      - name: j_dbkc
+        datatype: STRING
+        nullable: true
+      - name: j_nmcl
+        datatype: STRING
+        nullable: true
+      - name: j_nmdn
+        datatype: INTEGER
+        nullable: true
+      - name: j_nmhn
+        datatype: INTEGER
+        nullable: true
+      - name: j_nnln
+        datatype: INTEGER
+        nullable: true
+      - name: j_nnjn
+        datatype: INTEGER
+        nullable: true
+      - name: j_nnkn
+        datatype: INTEGER
+        nullable: true
+      - name: j_dbln
+        datatype: INTEGER
+        nullable: true
+      - name: j_dbmn
+        datatype: INTEGER
+        nullable: true
+      - name: j_dbnn
+        datatype: INTEGER
+        nullable: true
+      - name: j_dbon
+        datatype: INTEGER
+        nullable: true
+      - name: j_dbpn
+        datatype: INTEGER
+        nullable: true
+      - name: j_dbqn
+        datatype: STRING
+        nullable: true
+      - name: j_nnvn
+        datatype: INTEGER
+        nullable: true
+      - name: j_nnwn
+        datatype: INTEGER
+        nullable: true
+      - name: j_dbrn
+        datatype: INTEGER
+        nullable: true
+      - name: j_dcqn
+        datatype: INTEGER
+        nullable: true
+      - name: j_dbsn
+        datatype: INTEGER
+        nullable: true
+      - name: j_dbtn
+        datatype: INTEGER
+        nullable: true
+      - name: j_dbun
+        datatype: INTEGER
+        nullable: true
+      - name: j_dbvn
+        datatype: INTEGER
+        nullable: true
+      - name: j_dbwn
+        datatype: INTEGER
+        nullable: true
+      - name: j_dbxn
+        datatype: INTEGER
+        nullable: true
+      - name: j_dbyn
+        datatype: INTEGER
+        nullable: true
+      - name: j_dbzn
+        datatype: INTEGER
+        nullable: true
+      - name: j_dcan
+        datatype: INTEGER
+        nullable: true
+      - name: j_dcbn
+        datatype: INTEGER
+        nullable: true
+      - name: j_dccn
+        datatype: INTEGER
+        nullable: true
+      - name: j_dcdn
+        datatype: INTEGER
+        nullable: true
+      - name: j_nmsn
+        datatype: INTEGER
+        nullable: true
+      - name: j_nmtn
+        datatype: INTEGER
+        nullable: true
+      - name: j_nmun
+        datatype: INTEGER
+        nullable: true
+      - name: j_nmvn
+        datatype: INTEGER
+        nullable: true
+      - name: j_nmxn
+        datatype: INTEGER
+        nullable: true
+      - name: j_dcen
+        datatype: INTEGER
+        nullable: true
+      - name: j_nnan
+        datatype: INTEGER
+        nullable: true
+      - name: j_nnbn
+        datatype: INTEGER
+        nullable: true
+      - name: j_nncn
+        datatype: INTEGER
+        nullable: true
+      - name: j_dcfn
+        datatype: INTEGER
+        nullable: true
+      - name: j_nnen
+        datatype: INTEGER
+        nullable: true
+      - name: j_nnfn
+        datatype: INTEGER
+        nullable: true
+      - name: j_nngn
+        datatype: INTEGER
+        nullable: true
+      - name: j_dcgn
+        datatype: INTEGER
+        nullable: true
+      - name: j_dchn
+        datatype: INTEGER
+        nullable: true
+      - name: j_dcin
+        datatype: INTEGER
+        nullable: true
+      - name: j_defn
+        datatype: INTEGER
+        nullable: true
+      - name: j_dcjn
+        datatype: INTEGER
+        nullable: true
+      - name: j_dckn
+        datatype: INTEGER
+        nullable: true
+      - name: j_dcln
+        datatype: INTEGER
+        nullable: true
+      - name: j_nodn
+        datatype: INTEGER
+        nullable: true
+        default_function: generate_j_nodn
+      - name: j_noen
+        datatype: INTEGER
+        nullable: true
+        default_function: generate_j_noen
+      - name: j_aoxi
+        datatype: STRING
+        nullable: true
+      - name: j_aoyi
+        datatype: STRING
+        nullable: true
+      - name: j_nnqn
+        datatype: INTEGER
+        nullable: true
+      - name: j_nnmn
+        datatype: INTEGER
+        nullable: true
+      - name: j_nmin
+        datatype: INTEGER
+        nullable: true
+      - name: j_nlyl
+        datatype: STRING
+        nullable: true
+      - name: j_dcml
+        datatype: STRING
+        nullable: true
+      - name: j_dkxl
+        datatype: STRING
+        nullable: true
+      - name: j_dmfn
+        datatype: INTEGER
+        nullable: true
+      - name: j_eyal
+        datatype: STRING
+        nullable: true
+      - name: j_appn
+        datatype: INTEGER
+        nullable: true
+      - name: j_azpn
+        datatype: INTEGER
+        nullable: true
+      - name: j_azqn
+        datatype: INTEGER
+        nullable: true
+      - name: j_azrn
+        datatype: INTEGER
+        nullable: true
+      - name: j_bben
+        datatype: INTEGER
+        nullable: true
+      - name: j_fxtn
+        datatype: INTEGER
+        nullable: true
+      - name: j_ifpn
+        datatype: INTEGER
+        nullable: true
+      - name: j_ixgn
+        datatype: INTEGER
+        nullable: true
+      - name: j_ixhn
+        datatype: INTEGER
+        nullable: true
+      - name: j_jfpn
+        datatype: INTEGER
+        nullable: true
+      - name: j_jfqn
+        datatype: INTEGER
+        nullable: true
+      - name: j_jfrn
+        datatype: INTEGER
+        nullable: true
+      - name: j_jfsn
+        datatype: INTEGER
+        nullable: true
+      - name: j_jftn
+        datatype: INTEGER
+        nullable: true
+      - name: j_jfun
+        datatype: INTEGER
+        nullable: true
+      - name: j_llel
+        datatype: STRING
+        nullable: true
+      - name: j_isbn
+        datatype: INTEGER
+        nullable: true
+      - name: j_ivjn
+        datatype: INTEGER
+        nullable: true
+      - name: j_jidl
+        datatype: STRING
+        nullable: true
+      - name: j_fdht
+        datatype: STRING
+        nullable: true
+      - name: dsaxrc
+        datatype: STRING
+        nullable: true
+      - name: dsaxst
+        datatype: STRING
+        nullable: true
+      - name: dsaxtc
+        datatype: STRING
+        nullable: true
+      - name: dsaxul
+        datatype: STRING
+        nullable: true
+      - name: dsaxvl
+        datatype: STRING
+        nullable: true
+      - name: dsaxwl
+        datatype: STRING
+        nullable: true
+      - name: dsaxxc
+        datatype: STRING
+        nullable: true
+      - name: dsaxyc
+        datatype: STRING
+        nullable: true
+      - name: dsaxzc
+        datatype: STRING
+        nullable: true
+      - name: dsayac
+        datatype: STRING
+        nullable: true
+      - name: dsbszn
+        datatype: INTEGER
+        nullable: true
+      - name: dsbtan
+        datatype: INTEGER
+        nullable: true
+      - name: dsbtbn
+        datatype: INTEGER
+        nullable: true
+      - name: dscbzn
+        datatype: INTEGER
+        nullable: true
+      - name: dsccan
+        datatype: INTEGER
+        nullable: true
+      - name: dscvqn
+        datatype: INTEGER
+        nullable: true
+      - name: dscvrn
+        datatype: INTEGER
+        nullable: true
+      - name: dscvsn
+        datatype: INTEGER
+        nullable: true
+      - name: dsdegn
+        datatype: INTEGER
+        nullable: true
+      - name: dsdehn
+        datatype: INTEGER
+        nullable: true
+      - name: dsebxn
+        datatype: INTEGER
+        nullable: true
+      - name: dsfbpi
+        datatype: STRING
+        nullable: true
+      - name: dsfbqi
+        datatype: STRING
+        nullable: true
+      - name: dsfbri
+        datatype: STRING
+        nullable: true
+      - name: dsfvzl
+        datatype: STRING
+        nullable: true
+      - name: dsibsc
+        datatype: STRING
+        nullable: true
+      - name: dsibtc
+        datatype: STRING
+        nullable: true
+      - name: dsibul
+        datatype: STRING
+        nullable: true
+      - name: bts_ingestion_ts
+        datatype: TIMESTAMP
+        nullable: true
+        is_audit_column: true
+      - name: bts_ingest_map
+        datatype: STRING
+        nullable: true
+        is_audit_column: true
+      - name: bts_batch_dt
+        datatype: DATE
+        nullable: true
+        is_audit_column: true
+      - name: bts_flag
+        datatype: BOOLEAN
+        nullable: true
+        is_audit_column: true
+    depends_on: null
+    primary_keys: [j_nlpc]
+
+  j_ctde:
+    fields:
+      - name: delta_flag
+        datatype: STRING
+        nullable: true
+        is_audit_column: true
+      - name: j_nadi
+        datatype: STRING
+        nullable: true
+        default_function: generate_j_nadi
+      - name: j_naei
+        datatype: STRING
+        nullable: true
+        default_function: generate_j_naei
+        depends_on: [j_nadi]
+      - name: j_najt
+        datatype: STRING
+        nullable: true
+      - name: j_nakt
+        datatype: STRING
+        nullable: true
+      - name: j_nalt
+        datatype: STRING
+        nullable: true
+      - name: j_naft
+        datatype: STRING
+        nullable: true
+      - name: j_nagt
+        datatype: STRING
+        nullable: true
+      - name: j_naht
+        datatype: STRING
+        nullable: true
+      - name: j_nait
+        datatype: STRING
+        nullable: true
+      - name: j_cyqc
+        datatype: STRING
+        nullable: true
+      - name: j_cyrc
+        datatype: STRING
+        nullable: true
+      - name: j_cysc
+        datatype: STRING
+        nullable: true
+      - name: j_cytc
+        datatype: STRING
+        nullable: true
+      - name: j_cyuc
+        datatype: STRING
+        nullable: true
+      - name: j_cyvc
+        datatype: STRING
+        nullable: true
+      - name: j_dkxl
+        datatype: STRING
+        nullable: true
+      - name: j_fdht
+        datatype: STRING
+        nullable: true
+      - name: dsaycc
+        datatype: STRING
+        nullable: true
+      - name: dsaydt
+        datatype: STRING
+        nullable: true
+      - name: dsayec
+        datatype: STRING
+        nullable: true
+      - name: dsayfc
+        datatype: STRING
+        nullable: true
+      - name: dsaygc
+        datatype: STRING
+        nullable: true
+      - name: dsayhc
+        datatype: STRING
+        nullable: true
+      - name: dsayic
+        datatype: STRING
+        nullable: true
+      - name: dsayjc
+        datatype: STRING
+        nullable: true
+      - name: dsaykc
+        datatype: STRING
+        nullable: true
+      - name: dsaylc
+        datatype: STRING
+        nullable: true
+      - name: dscbyc
+        datatype: STRING
+        nullable: true
+      - name: bts_ingestion_ts
+        datatype: TIMESTAMP
+        nullable: true
+        is_audit_column: true
+      - name: bts_ingest_map
+        datatype: STRING
+        nullable: true
+        is_audit_column: true
+      - name: bts_batch_dt
+        datatype: DATE
+        nullable: true
+        is_audit_column: true
+      - name: bts_flag
+        datatype: BOOLEAN
+        nullable: true
+        is_audit_column: true
+    depends_on: null
+    independent_qualifiers: [j_nadi]
+    primary_keys: [j_naei, j_nadi]
+
+  j_ctun:
+    fields:
+      - name: delta_flag
+        datatype: STRING
+        nullable: true
+        is_audit_column: true
+      - name: j_nofc
+        datatype: STRING
+        nullable: true
+        default_function: generate_j_nofc
+      - name: j_nogi
+        datatype: STRING
+        nullable: true
+      - name: j_noht
+        datatype: STRING
+        nullable: true
+      - name: j_noit
+        datatype: STRING
+        nullable: true
+      - name: j_nojt
+        datatype: STRING
+        nullable: true
+      - name: j_nokt
+        datatype: STRING
+        nullable: true
+      - name: j_nolt
+        datatype: STRING
+        nullable: true
+      - name: j_nomt
+        datatype: STRING
+        nullable: true
+      - name: j_nont
+        datatype: STRING
+        nullable: true
+      - name: j_cywt
+        datatype: STRING
+        nullable: true
+      - name: j_dsci
+        datatype: STRING
+        nullable: true
+      - name: j_cyxi
+        datatype: STRING
+        nullable: true
+      - name: j_cyyt
+        datatype: STRING
+        nullable: true
+      - name: j_cyzc
+        datatype: STRING
+        nullable: true
+      - name: j_noot
+        datatype: STRING
+        nullable: true
+      - name: j_nop8
+        datatype: STRING
+        nullable: true
+      - name: j_noq8
+        datatype: STRING
+        nullable: true
+      - name: j_nosl
+        datatype: STRING
+        nullable: true
+      - name: j_noti
+        datatype: STRING
+        nullable: true
+      - name: j_noul
+        datatype: STRING
+        nullable: true
+      - name: j_rcv_
+        datatype: FLOAT
+        nullable: true
+      - name: j_rcw_
+        datatype: FLOAT
+        nullable: true
+      - name: j_rcx_
+        datatype: FLOAT
+        nullable: true
+      - name: j_rcy_
+        datatype: FLOAT
+        nullable: true
+      - name: j_rcz_
+        datatype: FLOAT
+        nullable: true
+      - name: j_rda_
+        datatype: FLOAT
+        nullable: true
+      - name: j_dhyt
+        datatype: STRING
+        nullable: true
+      - name: j_dhzt
+        datatype: STRING
+        nullable: true
+      - name: j_diat
+        datatype: STRING
+        nullable: true
+      - name: j_dibt
+        datatype: STRING
+        nullable: true
+      - name: j_dict
+        datatype: STRING
+        nullable: true
+      - name: j_didt
+        datatype: STRING
+        nullable: true
+      - name: j_diet
+        datatype: STRING
+        nullable: true
+      - name: j_dift
+        datatype: STRING
+        nullable: true
+      - name: j_digt
+        datatype: STRING
+        nullable: true
+      - name: j_diht
+        datatype: STRING
+        nullable: true
+      - name: j_dhsi
+        datatype: STRING
+        nullable: true
+      - name: j_dhti
+        datatype: STRING
+        nullable: true
+      - name: j_dhui
+        datatype: STRING
+        nullable: true
+      - name: j_dhvi
+        datatype: STRING
+        nullable: true
+      - name: j_dhwi
+        datatype: STRING
+        nullable: true
+      - name: j_iiac
+        datatype: STRING
+        nullable: true
+      - name: j_iibc
+        datatype: STRING
+        nullable: true
+      - name: j_iicl
+        datatype: STRING
+        nullable: true
+      - name: j_iidc
+        datatype: STRING
+        nullable: true
+      - name: j_iiec
+        datatype: STRING
+        nullable: true
+      - name: j_iifc
+        datatype: STRING
+        nullable: true
+      - name: j_iigl
+        datatype: STRING
+        nullable: true
+      - name: j_iihc
+        datatype: STRING
+        nullable: true
+      - name: j_fdht
+        datatype: STRING
+        nullable: true
+      - name: dsatwc
+        datatype: STRING
+        nullable: true
+      - name: dsaywt
+        datatype: STRING
+        nullable: true
+      - name: dsayxc
+        datatype: STRING
+        nullable: true
+      - name: dseevl
+        datatype: STRING
+        nullable: true
+      - name: dseewc
+        datatype: STRING
+        nullable: true
+      - name: dseidi
+        datatype: STRING
+        nullable: true
+      - name: dsemwc
+        datatype: STRING
+        nullable: true
+      - name: bts_ingestion_ts
+        datatype: TIMESTAMP
+        nullable: true
+        is_audit_column: true
+      - name: bts_ingest_map
+        datatype: STRING
+        nullable: true
+        is_audit_column: true
+      - name: bts_batch_dt
+        datatype: DATE
+        nullable: true
+        is_audit_column: true
+      - name: bts_flag
+        datatype: BOOLEAN
+        nullable: true
+        is_audit_column: true
+    depends_on: null
+    independent_qualifiers: [j_nofc]
+    primary_keys: [j_nogi, j_nofc]
+
+  j_cums:
+    fields:
+      - name: delta_flag
+        datatype: STRING
+        nullable: true
+        is_audit_column: true
+      - name: j_mrui
+        datatype: STRING
+        nullable: true
+        default_function: generate_customer_id
+      - name: j_mrvt
+        datatype: STRING
+        nullable: true
+        default_function: generate_j_mrzt_company_short_name
+      - name: j_mrwt
+        datatype: STRING
+        nullable: true
+      - name: j_mrxt
+        datatype: STRING
+        nullable: true
+      - name: j_mryt
+        datatype: STRING
+        nullable: true
+      - name: j_mrzt
+        datatype: STRING
+        nullable: true
+        default_function: generate_j_mrzt_company_short_name
+      - name: j_rbac
+        datatype: STRING
+        nullable: true
+      - name: j_msac
+        datatype: STRING
+        nullable: true
+      - name: j_ifdc
+        datatype: STRING
+        nullable: true
+      - name: j_rbbc
+        datatype: STRING
+        nullable: true
+      - name: j_msbi
+        datatype: STRING
+        nullable: true
+      - name: j_msci
+        datatype: STRING
+        nullable: true
+      - name: j_msdi
+        datatype: STRING
+        nullable: true
+      - name: j_msei
+        datatype: STRING
+        nullable: true
+      - name: j_rapi
+        datatype: STRING
+        nullable: true
+        default_function: generate_int_as_string
+      - name: j_lhri
+        datatype: STRING
+        nullable: true
+      - name: j_lgki
+        datatype: STRING
+        nullable: true
+        default_function: generate_int_as_string
+      - name: j_lhtc
+        datatype: STRING
+        nullable: true
+      - name: j_lhsi
+        datatype: STRING
+        nullable: true
+      - name: j_msfc
+        datatype: STRING
+        nullable: true
+      - name: j_msgl
+        datatype: STRING
+        nullable: true
+      - name: j_rauc
+        datatype: STRING
+        nullable: true
+      - name: j_rbci
+        datatype: STRING
+        nullable: true
+      - name: j_mshc
+        datatype: STRING
+        nullable: true
+      - name: j_msic
+        datatype: STRING
+        nullable: true
+      - name: j_msjc
+        datatype: STRING
+        nullable: true
+      - name: j_mskc
+        datatype: STRING
+        nullable: true
+      - name: j_msl8
+        datatype: STRING
+        nullable: true
+      - name: j_msm8
+        datatype: STRING
+        nullable: true
+      - name: j_msn8
+        datatype: STRING
+        nullable: true
+      - name: j_mso8
+        datatype: STRING
+        nullable: true
+      - name: j_mspc
+        datatype: STRING
+        nullable: true
+      - name: j_msq8
+        datatype: STRING
+        nullable: true
+      - name: j_msr_
+        datatype: FLOAT
+        nullable: true
+      - name: j_mss_
+        datatype: FLOAT
+        nullable: true
+      - name: j_mst8
+        datatype: STRING
+        nullable: true
+      - name: j_msxn
+        datatype: INTEGER
+        nullable: true
+      - name: j_msyn
+        datatype: INTEGER
+        nullable: true
+      - name: j_mszi
+        datatype: STRING
+        nullable: true
+      - name: j_cvac
+        datatype: STRING
+        nullable: true
+      - name: j_cvbc
+        datatype: STRING
+        nullable: true
+      - name: j_cyp8
+        datatype: STRING
+        nullable: true
+      - name: j_mtac
+        datatype: STRING
+        nullable: true
+      - name: j_mtbc
+        datatype: STRING
+        nullable: true
+      - name: j_mtcc
+        datatype: STRING
+        nullable: true
+      - name: j_mtd8
+        datatype: STRING
+        nullable: true
+      - name: j_mte8
+        datatype: STRING
+        nullable: true
+      - name: j_mtf_
+        datatype: FLOAT
+        nullable: true
+      - name: j_mtg_
+        datatype: FLOAT
+        nullable: true
+      - name: j_aot8
+        datatype: STRING
+        nullable: true
+      - name: j_fvrc
+        datatype: STRING
+        nullable: true
+      - name: j_fvsc
+        datatype: STRING
+        nullable: true
+      - name: j_fvt8
+        datatype: STRING
+        nullable: true
+      - name: j_fvuc
+        datatype: STRING
+        nullable: true
+      - name: j_fvvc
+        datatype: STRING
+        nullable: true
+      - name: j_fvwc
+        datatype: STRING
+        nullable: true
+      - name: j_fvxc
+        datatype: STRING
+        nullable: true
+      - name: j_fvyc
+        datatype: STRING
+        nullable: true
+      - name: j_fdht
+        datatype: STRING
+        nullable: true
+      - name: dsauuc
+        datatype: STRING
+        nullable: true
+      - name: dsauvt
+        datatype: STRING
+        nullable: true
+      - name: dsauwl
+        datatype: STRING
+        nullable: true
+      - name: dsauxl
+        datatype: STRING
+        nullable: true
+      - name: dsauyl
+        datatype: STRING
+        nullable: true
+      - name: dsauzc
+        datatype: STRING
+        nullable: true
+      - name: dsavat
+        datatype: STRING
+        nullable: true
+      - name: dsavbl
+        datatype: STRING
+        nullable: true
+      - name: dsavcl
+        datatype: STRING
+        nullable: true
+      - name: dsavdl
+        datatype: STRING
+        nullable: true
+      - name: dsavec
+        datatype: STRING
+        nullable: true
+      - name: dsavfc
+        datatype: STRING
+        nullable: true
+      - name: dsbppi
+        datatype: STRING
+        nullable: true
+      - name: dsbqwt
+        datatype: STRING
+        nullable: true
+      - name: dsbxwc
+        datatype: STRING
+        nullable: true
+      - name: dsdpvp
+        datatype: FLOAT
+        nullable: true
+      - name: dsdpxp
+        datatype: FLOAT
+        nullable: true
+      - name: dsfrlc
+        datatype: STRING
+        nullable: true
+      - name: dsfrmc
+        datatype: STRING
+        nullable: true
+      - name: dsftfc
+        datatype: STRING
+        nullable: true
+      - name: dsibon
+        datatype: FLOAT
+        nullable: true
+      - name: bts_ingestion_ts
+        datatype: TIMESTAMP
+        nullable: true
+        is_audit_column: true
+      - name: bts_ingest_map
+        datatype: STRING
+        nullable: true
+        is_audit_column: true
+      - name: bts_batch_dt
+        datatype: DATE
+        nullable: true
+        is_audit_column: true
+      - name: bts_flag
+        datatype: BOOLEAN
+        nullable: true
+        is_audit_column: true
+    depends_on: [j_ctun]
+    primary_keys: [j_mrui]
+
+relationships:
+  # CUMS
+
+  - from: j_cums
+    to: j_ctun
+    on_field: [j_lhsi]
+    foreign_key_in_to: [j_nogi]
+    fields_added_to_foreign_key_in_to: # To deal with cases like this, we add key value pair to eligible_primary_keys and attr_values in create_entity()
+      j_nofc: '08'
+    type: many-to-one
+
+  # CAMS
+
+  - from: j_cams
+    to: j_ctun
+    on_field: [j_bbhi]
+    foreign_key_in_to: [j_nogi]
+    fields_added_to_foreign_key_in_to: # To deal with cases like this, we add key value pair to eligible_primary_keys and attr_values in create_entity()
+      j_nofc: '08'
+    type: many-to-one
+
+  - from: j_cams
+    to: j_cums
+    on_field: [j_babi]
+    foreign_key_in_to: [j_mrui]
+    type: many-to-one
+
+  - from: j_cams
+    to: j_ctde
+    on_field: [j_baai]
+    foreign_key_in_to: [j_naei]
+    fields_added_to_foreign_key_in_to: # To deal with cases like this, we add key value pair to eligible_primary_keys and attr_values in create_entity()
+      j_nadi: LT026
+    type: many-to-one
+
+  # CLMS
+
+  - from: j_clms
+    to: j_ctde
+    on_field: [j_awac]
+    foreign_key_in_to: [j_naei]
+    fields_added_to_foreign_key_in_to: # To deal with cases like this, we add key value pair to eligible_primary_keys and attr_values in create_entity()
+      j_nadi: T2375
+    type: many-to-one
+
+  - from: j_clms
+    to: j_cams
+    on_field: [j_mbsi, j_mbxi, j_mbui]
+    foreign_key_in_to: [j_baai, j_baci, j_babi]
+    type: many-to-one
+
+  # CLPB
+
+  - from: j_clpb
+    to: j_clms
+    on_field: [j_mkwi, j_mkxi, j_cxac]
+    foreign_key_in_to: [j_mbsi, j_mbti, j_cnfc]
+    type: one-to-one
+
+  - from: j_clpb
+    to: j_ctde
+    on_field: [j_mlbc]
+    foreign_key_in_to: [j_naei]
+    fields_added_to_foreign_key_in_to: # To deal with cases like this, we add key value pair to eligible_primary_keys and attr_values in create_entity()
+      j_nadi: T2110
+    type: many-to-one
+
+  - from: j_clpb
+    to: j_ctde
+    on_field: [j_mlac]
+    foreign_key_in_to: [j_naei]
+    fields_added_to_foreign_key_in_to: # To deal with cases like this, we add key value pair to eligible_primary_keys and attr_values in create_entity()
+      j_nadi: T2005
+    type: many-to-one
+
+  - from: j_clpb
+    to: j_clla
+    on_field: [j_cxac, j_mkwi, j_mkxi, j_mkyi, j_mkzi]
+    foreign_key_in_to: [j_cjmc, j_meyi, j_mezi, j_mfai, j_mfbi]
+    type: one-to-one
+
+  # CLDT
+
+  - from: j_cldt
+    to: j_clms
+    on_field: [j_rjoi, j_rjpi]
+    foreign_key_in_to: [j_mbsi, j_mbti]
+    type: many-to-one
+
+  - from: j_cldt
+    to: j_clte
+    on_field: [j_rjuc]
+    foreign_key_in_to: [j_nlpc]
+    type: many-to-one
+
+  # CALM
+
+  - from: j_calm
+    to: j_cams
+    on_field: [j_bfmc, j_bfai, j_bfci, j_bfdi]
+    foreign_key_in_to: [j_bazc, j_baai, j_baci, j_babi]
+    type: one-to-one
+
+  # CAFE
+
+  - from: j_cafe
+    to: j_ctde
+    on_field: [j_blkc]
+    foreign_key_in_to: [j_naei]
+    fields_added_to_foreign_key_in_to: # To deal with cases like this, we add key value pair to eligible_primary_keys and attr_values in create_entity()
+      j_nadi: T1105
+    type: many-to-one
+
+  - from: j_cafe
+    to: j_calm
+    on_field: [j_ijhc, j_bjai, j_bjci, j_bjdi, j_cqbc, j_bjei, j_bjfc, j_bjgi]
+    foreign_key_in_to: [j_bfmc, j_bfai, j_bfci, j_bfdi, j_cqjc, j_bfei, j_bffc, j_bfgi]
+    type: one-to-one
+
+  # CLLA
+
+  - from: j_clla
+    to: j_clms
+    on_field: [j_meyi, j_mezi, j_mfhi]
+    foreign_key_in_to: [j_mbsi, j_mbti, j_mbxi]
+    type: one-to-one
+
+  - from: j_clla
+    to: j_ctde
+    on_field: [j_cjmc]
+    foreign_key_in_to: [j_naei]
+    fields_added_to_foreign_key_in_to: # To deal with cases like this, we add key value pair to eligible_primary_keys and attr_values in create_entity()
+      j_nadi: T1300
+    type: many-to-one
+
+  # CLAS
+
+  - from: j_clas
+    to: j_clla
+    on_field: [j_ccvi, j_ccwi, j_ccxi, j_ccyi, j_cczc]
+    foreign_key_in_to: [j_meyi, j_mezi, j_mfai, j_mfbi, j_cjmc]
+    type: one-to-one
+
+  # DSCLRA
+
+  - from: dsclra
+    to: j_clas
+    on_field: [j_ccvi, j_ccwi, j_ccxi, j_ccyi, j_cczc]
+    foreign_key_in_to: [j_ccvi, j_ccwi, j_ccxi, j_ccyi, j_cczc]
+    type: one-to-one
+
+  # CLMI
+
+  - from: j_clmi
+    to: j_ctde
+    on_field: [j_duec]
+    foreign_key_in_to: [j_naei]
+    fields_added_to_foreign_key_in_to: # To deal with cases like this, we add key value pair to eligible_primary_keys and attr_values in create_entity()
+      j_nadi: T2060
+    type: many-to-one
+
+  - from: j_clmi
+    to: j_ctde
+    on_field: [j_mcdc]
+    foreign_key_in_to: [j_naei]
+    fields_added_to_foreign_key_in_to: # To deal with cases like this, we add key value pair to eligible_primary_keys and attr_values in create_entity()
+      j_nadi: T0340
+    type: many-to-one
+
+  - from: j_clmi
+    to: j_ctde
+    on_field: [j_mccc]
+    foreign_key_in_to: [j_naei]
+    fields_added_to_foreign_key_in_to: # To deal with cases like this, we add key value pair to eligible_primary_keys and attr_values in create_entity()
+      j_nadi: T0335
+    type: many-to-one
+
+  - from: j_clmi
+    to: j_clla
+    on_field: [j_mbsi, j_mbti]
+    foreign_key_in_to: [j_meyi, j_mezi]
+    type: one-to-one

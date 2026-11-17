@@ -1,0 +1,266 @@
+tables:
+  customer:
+    fields:
+      - name: customer_id
+        datatype: INTEGER
+        nullabe: false
+        default_function: generate_customer_id
+        depends_on: null # parameters of default_function, list of field names of table
+      - name: sex
+        datatype: STRING
+        nullable: false
+        default_function: generate_sex
+        depends_on: null
+      - name: name
+        datatype: STRING
+        nullable: false
+        default_function: generate_name
+        depends_on: [sex]
+      - name: timestamp_created
+        datatype: DATETIME
+        nullable: false
+        default_function: generate_timestamp_created
+        depends_on: null
+    depends_on: null
+    primary_keys: [customer_id] # Currently primary_keys is only used for 1st function on recursive call of recursively_crud_action
+  
+  loan_facility:
+    fields:
+      - name: portfolio_id
+        datatype: INTEGER
+        nullable: false
+        default_function: generate_portfoilio_id
+        depends_on: null
+      - name: facility_code
+        datatype: INTEGER
+        nullable: false
+        default_function: generate_facility_code
+        depends_on: portfolio_id
+      - name: repayment_schedule_id
+        datatype: INTEGER
+        nullable: false
+        default_function: null
+        depends_on: null
+    depends_on: [repayment_schedule]
+    primary_keys: [portfolio_id, facility_code] # For conjugate keys, you should declare dependency between them to ensure that combination is unique (e.g. generate_facility_code enusres uniqueness of combination - since facility_code depends on portfolio_id)
+
+  repayment_schedule:
+    fields:
+      - name: repayment_schedule_id
+        datatype: INTEGER
+        nullable: false
+        default_function: generate_repayment_schedule_id
+        depends_on: null
+      - name: repayment_schedule_info
+        datatype: STRING
+        nullable: false
+        default_function: generate_repayment_schedule_info
+        depends_on: null
+    depends_on: null
+    primary_keys: [repayment_schedule_id]
+
+  loan:
+    fields:
+      - name: loan_id
+        datatype: INTEGER
+        nullable: false
+        default_function: generate_loan_id
+        depends_on: null
+      - name: borrower_id
+        datatype: INTEGER
+        nullable: false
+        default_function: null
+        depends_on: null
+      - name: lender_id
+        datatype: INTEGER
+        nullable: false
+        default_function: null
+        depends_on: null
+      - name: amount
+        datatype: INTEGER
+        nullable: false
+        default_function: generate_amount
+        depends_on: [currency_code]
+      - name: timestamp_created
+        datatype: DATETIME
+        nullable: false
+        default_function: generate_timestamp_created
+        depends_on: null
+      - name: currency_code
+        datatype: INTEGER
+        nullable: false
+        default_function: generate_currency_code
+        depends_on: null
+      - name: portfolio_id
+        datatype: STRING
+        nullable: true
+        default_function: null
+        depends_on: null
+      - name: loan_facility_code
+        datatype: INTEGER
+        nullable: true
+        default_function: null
+        depends_on: null
+      - name: repayment_schedule_id
+        datatype: INTEGER
+        nullable: false
+        default_function: null
+        depends_on: null
+      - name: child_w_2_fks_id
+        datatype: INTEGER
+        nullable: false
+        default_function: null
+        depends_on: null
+    depends_on: [customer, loan_facility, repayment_schedule, child_w_2_fks]
+    primary_keys: [loan_id]
+
+  cust_addr_join:
+    fields:
+      - name: customer_id
+        datatype: INTEGER
+        nullable: false
+        default_function: null
+        depends_on: null
+      - name: address_id
+        datatype: INTEGER
+        nullable: false
+        default_function: null
+        depends_on: null
+    depends_on: [customer, address]
+    primary_keys: [customer_id, address_id]
+
+  address:
+    fields:
+      - name: address_id
+        datatype: INTEGER
+        nullable: false
+        default_function: generate_address_id
+        depends_on: null
+      - name: country_code
+        datatype: STRING
+        nullable: true
+        default_function: generate_country_code
+        depends_on: null
+      - name: city
+        datatype: STRING
+        nullable: true
+        default_function: generate_city
+        depends_on: [country_code]
+      - name: postcode
+        datatype: STRING
+        nullable: true
+        default_function: generate_postcode
+        depends_on: [country_code]
+    depends_on: null
+    primary_keys: [address_id]
+
+  child_w_2_fks: # Awkward pattern found in ACBSUK: 2 fks point to the same table, but parent essentially represents 2 tables (using independent_qualifier)
+    fields:
+      - name: pk
+        datatype: STRING
+        nullable: false
+        default_function: generate_pk
+        depends_on: null
+      - name: fk_a
+        datatype: STRING
+        nullable: false
+        default_function: null
+        depends_on: null
+      - name: fk_b
+        datatype: STRING
+        nullable: false
+        default_function: null
+        depends_on: null
+    depends_on: parent_w_independent_qualifier
+    primary_keys: [pk]
+
+  parent_w_independent_qualifier: # Awkward pattern found in ACBSUK: essentially represents 2 tables using independent_qualifier, independent_qualifier and pk is conjugate key. Entities for different independent_qualifier values have no relation.
+    fields:
+      - name: independent_qualifier
+        datatype: STRING
+        nullable: false
+        default_function: generate_independent_qualifier
+        depends_on: null
+      - name: pk
+        datatype: STRING
+        nullable: false
+        default_function: generate_pk_not_guarenteed_unique # Because the conjugate key design, I will use a function that does not guarentee uniqueness of pk field
+        depends_on: independent_qualifier
+    depends_on: null
+    primary_keys: [independent_qualifier, pk]
+    independent_qualifiers: [independent_qualifier]
+
+# Ensure all are child to parent
+# Don't allow one-to-many (as this will not match convention of a-to-b where foreign keys are in a - this is because foreign keys are sotred on the 'many' side in normalised database)
+# Ensure that for all relationships the from table has the foreign key
+
+relationships:
+
+  - from: loan
+    to: customer
+    on_field: [borrower_id]
+    foreign_key_in_to: [customer_id]
+    type: many-to-one
+
+  - from: loan
+    to: customer
+    on_field: [lender_id]
+    foreign_key_in_to: [customer_id]
+    type: many-to-one
+
+  - from: loan
+    to: loan_facility
+    on_field: [portfolio_id, loan_facility_code]
+    foreign_key_in_to: [portfolio_id, facility_code] # Important that these are in the same order (1st item in 'on_field' -> 1st item in 'foreign_key_in_to' etc.)
+    type: many-to-one
+
+  - from: loan
+    to: repayment_schedule
+    on_field: [repayment_schedule_id]
+    foreign_key_in_to: [repayment_schedule_id]
+    type: many-to-one
+
+  - from: loan_facility
+    to: repayment_schedule
+    on_field: [repayment_schedule_id]
+    foreign_key_in_to: [repayment_schedule_id]
+    type: many-to-one
+
+  - from: cust_addr_join
+    to: customer
+    on_field: [customer_id]
+    foreign_key_in_to: [customer_id]
+    type: many-to-one
+
+  - from: cust_addr_join
+    to: address
+    on_field: [address_id]
+    foreign_key_in_to: [address_id]
+    type: many-to-one
+
+  - from: loan
+    to: child_w_2_fks
+    on_field: [child_w_2_fks_id]
+    foreign_key_in_to: [pk]
+    type: many-to-one
+
+  - from: child_w_2_fks
+    to: parent_w_independent_qualifier
+    on_field: [fk_a]
+    foreign_key_in_to: [pk]
+    fields_added_to_foreign_key_in_to: # To deal with cases like this, we add key value pair to eligible_primary_keys and attr_values in create_entity()
+      independent_qualifier: A
+    type: many-to-one
+
+  - from: child_w_2_fks
+    to: parent_w_independent_qualifier
+    on_field: [fk_b]
+    foreign_key_in_to: [pk]
+    fields_added_to_foreign_key_in_to: # To deal with cases like this, we add key value pair to eligible_primary_keys and attr_values in create_entity()
+      independent_qualifier: B
+    type: many-to-one
+
+
+
+
+  

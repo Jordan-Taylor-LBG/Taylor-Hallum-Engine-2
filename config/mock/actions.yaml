@@ -1,0 +1,91 @@
+create_repayment_schedule_and_loan_facility:
+  base_actions:
+    repayment_schedule:
+      CRUD: create
+      hardcoded_values: null # map attribute to value (takes priority over function if any function enetered for same attribute) if null default functions are used
+      attr_gen_functions: null # map attribute to function if null default functions are used
+    loan_facility:
+      CRUD: create
+      hardcoded_values: null 
+      attr_gen_functions: null 
+  entity_selection_functions: null # map table to function, if null picks entity uniformly at random
+
+create_customer_and_address:
+  base_actions:
+    customer:
+      CRUD: create
+      hardcoded_values: null # map attribute to value (takes priority over function if any function enetered for same attribute) if null default functions are used
+      attr_gen_functions: null # map attribute to function if null default functions are used
+    cust_addr_join:
+      CRUD: create
+      hardcoded_values: null 
+      attr_gen_functions: null
+    address:
+      CRUD: create
+      hardcoded_values: null 
+      attr_gen_functions: null 
+  entity_selection_functions: null # map table to function, if null picks entity uniformly at random
+
+create_customer_from_existing_address:
+  base_actions:
+    customer:
+      CRUD: create
+      hardcoded_values: null # map attribute to value (takes priority over function if any function enetered for same attribute) if null default functions are used
+      attr_gen_functions: null # map attribute to function if null default functions are used
+    cust_addr_join:
+      CRUD: create
+      hardcoded_values: null 
+      attr_gen_functions: null
+  entity_selection_functions: null # map table to function, if null picks entity uniformly at random
+
+create_loan:
+  base_actions:
+    loan:
+      CRUD: create
+      hardcoded_values: null # map attribute to value (takes priority over function if any function enetered for same attribute) if null default functions are used
+      attr_gen_functions: null # map attribute to function if null default functions are used
+  entity_selection_functions: null # map table to function, if null picks entity uniformly at random
+
+create_loan_and_repayment_schedule_and_loan_facility:
+  base_actions:
+    loan:
+      CRUD: create
+      hardcoded_values: null # map attribute to value (takes priority over function if any function enetered for same attribute) if null default functions are used
+      attr_gen_functions: null # map attribute to function if null default functions are used
+    repayment_schedule:
+      CRUD: create
+      hardcoded_values: null
+      attr_gen_functions: null
+    loan_facility:
+      CRUD: create
+      hardcoded_values: null 
+      attr_gen_functions: null 
+  entity_selection_functions: null # map table to function, if null picks entity uniformly at random
+
+create_child_and_parent_with_awkward_pattern_from_acbsuk:
+  base_actions:
+    parent_w_independent_qualifier:
+      CRUD: create
+      hardcoded_values: null
+      attr_gen_functions: null
+    child_w_2_fks:
+      CRUD: create
+      hardcoded_values: null # map attribute to value (takes priority over function if any function enetered for same attribute) if null default functions are used
+      attr_gen_functions: null # map attribute to function if null default functions are used
+  entity_selection_functions: null # map table to function, if null picks entity uniformly at random
+
+create_parent_with_awkward_pattern_from_acbsuk:
+  base_actions:
+    parent_w_independent_qualifier:
+      CRUD: create
+      hardcoded_values: null
+      attr_gen_functions: null
+  entity_selection_functions: null # map table to function, if null picks entity uniformly at random
+
+create_child_with_awkward_pattern_from_acbsuk:
+  base_actions:
+    child_w_2_fks:
+      CRUD: create
+      hardcoded_values: null # map attribute to value (takes priority over function if any function enetered for same attribute) if null default functions are used
+      attr_gen_functions: null # map attribute to function if null default functions are used
+  entity_selection_functions: null # map table to function, if null picks entity uniformly at random
